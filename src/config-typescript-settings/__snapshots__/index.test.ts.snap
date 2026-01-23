@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`is a valid ESLint config 1`] = `
+{
+  "languageOptions": {
+    "parser": [ESLint.Parser],
+    "parserOptions": {
+      "projectService": true,
+    },
+  },
+  "linterOptions": {
+    "reportUnusedDisableDirectives": "error",
+    "reportUnusedInlineConfigs": "error",
+  },
+  "name": "TypeScript (Linter Settings)",
+}
+`;

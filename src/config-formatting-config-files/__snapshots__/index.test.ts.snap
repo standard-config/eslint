@@ -1,0 +1,59 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`is a valid ESLint config 1`] = `
+{
+  "name": "Formatting (Config Files)",
+  "plugins": {
+    "perfectionist": [ESLint.Plugin],
+  },
+  "rules": {
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        "customGroups": [
+          {
+            "elementNamePattern": "^extends$",
+            "groupName": "extends",
+          },
+          {
+            "elementNamePattern": "^files$",
+            "groupName": "files",
+          },
+          {
+            "elementNamePattern": "^(ignores|ignorePatterns)$",
+            "groupName": "ignores",
+          },
+          {
+            "elementNamePattern": "^name$",
+            "groupName": "name",
+          },
+          {
+            "elementNamePattern": "^overrides$",
+            "groupName": "overrides",
+          },
+          {
+            "elementNamePattern": "^plugins$",
+            "groupName": "plugins",
+          },
+          {
+            "elementNamePattern": "^rules$",
+            "groupName": "rules",
+          },
+        ],
+        "groups": [
+          "name",
+          "files",
+          "extends",
+          "ignores",
+          "plugins",
+          "unknown",
+          "rules",
+          "overrides",
+        ],
+        "newlinesBetween": 0,
+        "type": "natural",
+      },
+    ],
+  },
+}
+`;

@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`is a valid ESLint config 1`] = `
+{
+  "name": "TypeScript",
+  "plugins": {
+    "@typescript-eslint": [ESLint.Plugin],
+  },
+  "rules": {
+    "@typescript-eslint/consistent-type-assertions": [
+      "error",
+      {
+        "assertionStyle": "as",
+        "objectLiteralTypeAssertions": "allow-as-parameter",
+      },
+    ],
+    "@typescript-eslint/consistent-type-exports": [
+      "error",
+      {
+        "fixMixedExportsWithInlineTypeSpecifier": true,
+      },
+    ],
+    "@typescript-eslint/no-unnecessary-qualifier": "error",
+    "@typescript-eslint/no-useless-default-assignment": "error",
+    "@typescript-eslint/parameter-properties": [
+      "error",
+      {
+        "prefer": "parameter-property",
+      },
+    ],
+    "@typescript-eslint/prefer-readonly": "error",
+    "camelcase": [
+      "error",
+      {
+        "properties": "always",
+      },
+    ],
+    "dot-notation": "error",
+    "func-name-matching": [
+      "error",
+      "never",
+      {
+        "considerPropertyDescriptor": true,
+      },
+    ],
+  },
+}
+`;
