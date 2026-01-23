@@ -1,6 +1,6 @@
 {
 	"name": "@standard-config/eslint",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "TypeScript-first ESLint config designed to complement Oxlint and Prettier",
 	"license": "MIT",
 	"author": {

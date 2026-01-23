@@ -26,7 +26,7 @@ import { defineConfig } from '@standard-config/eslint';
 export default defineConfig();
 ```
 
-You can also include it in an existing config.
+You can also include this config in an existing setup.
 
 ```ts
 import standardConfig from '@standard-config/eslint';
