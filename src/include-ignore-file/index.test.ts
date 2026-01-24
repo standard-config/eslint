@@ -11,15 +11,17 @@ test('includes ignored paths from `.gitignore`', async () => {
 		path.resolve(import.meta.dirname, '..', '..')
 	);
 
-	let prependIgnoreFile = await import('./index.ts').then(
+	const includeIgnoreFile = await import('./index.ts').then(
 		(module) => module.default
 	);
 
-	let result = prependIgnoreFile([]);
+	const result = includeIgnoreFile();
 
-	expectTypeOf(result).toEqualTypeOf<Linter.Config[]>();
-	expect(result).toBeInstanceOf(Array);
-	expect(result).toHaveLength(1);
+	expectTypeOf(result).toEqualTypeOf<Linter.Config>();
+	expect(result).toStrictEqual({
+		name: '.gitignore',
+		ignores: expect.any(Array),
+	});
 });
 
 test('omits ignored paths when `.gitignore` is missing', async () => {
@@ -27,13 +29,12 @@ test('omits ignored paths when `.gitignore` is missing', async () => {
 		path.resolve(import.meta.dirname, '..')
 	);
 
-	const prependIgnoreFile = await import('./index.ts').then(
+	const includeIgnoreFile = await import('./index.ts').then(
 		(module) => module.default
 	);
 
-	const result = prependIgnoreFile([]);
+	const result = includeIgnoreFile();
 
-	expectTypeOf(result).toEqualTypeOf<Linter.Config[]>();
-	expect(result).toBeInstanceOf(Array);
-	expect(result).toHaveLength(0);
+	expectTypeOf(result).toEqualTypeOf<Linter.Config>();
+	expect(result).toStrictEqual({});
 });

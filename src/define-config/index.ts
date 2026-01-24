@@ -1,6 +1,7 @@
 import type { Config } from 'eslint/config';
 import { defineConfig as _defineConfig } from 'eslint/config';
-import config from '../config/index.ts';
+import baseConfig from '../config/index.ts';
+import includeIgnoreFile from '../include-ignore-file/index.ts';
 
 /**
  * Combine Standard Config with optional additional config.
@@ -8,12 +9,19 @@ import config from '../config/index.ts';
 export default function defineConfig(
 	...configs: Parameters<typeof _defineConfig>
 ): Config[] {
-	return _defineConfig(
+	const extensionConfig = configs.length > 0 ? _defineConfig(...configs) : [];
+
+	const ignoreConfig = [
+		includeIgnoreFile(),
 		{
-			name: 'Standard Config',
-			files: ['**/*.{ts,tsx,cts,mts}'],
-			extends: [config],
+			name: 'Ignored Paths',
+			ignores: ['**/fixtures/**'],
 		},
-		...configs
-	);
+	];
+
+	return _defineConfig({
+		name: 'Standard Config',
+		files: ['**/*.{ts,tsx,cts,mts}'],
+		extends: [ignoreConfig, baseConfig, extensionConfig],
+	});
 }

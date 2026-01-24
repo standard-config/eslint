@@ -4,12 +4,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ignoreFilePath = path.resolve('.gitignore');
-const ignoreFilePathExists = fs.existsSync(ignoreFilePath);
+const ignoreFileExists = fs.existsSync(ignoreFilePath);
 
-export default function includeIgnoreFile(
-	configs: Linter.Config[]
-): Linter.Config[] {
-	return ignoreFilePathExists
-		? [_includeIgnoreFile(ignoreFilePath, '.gitignore'), ...configs]
-		: configs;
+export default function includeIgnoreFile(): Linter.Config {
+	return ignoreFileExists
+		? _includeIgnoreFile(ignoreFilePath, '.gitignore')
+		: {};
 }

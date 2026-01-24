@@ -1,2 +1,4 @@
-export { default } from './config/index.ts';
-export { default as defineConfig } from './define-config/index.ts';
+import defineConfig from './define-config/index.ts';
+
+export { defineConfig };
+export default defineConfig();
