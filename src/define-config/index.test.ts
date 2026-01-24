@@ -1,4 +1,7 @@
-import { defineConfig as _defineConfig, globalIgnores } from 'eslint/config';
+import {
+	defineConfig as eslintDefineConfig,
+	globalIgnores,
+} from 'eslint/config';
 import { expect, test } from 'vitest';
 import defineConfig from './index.ts';
 
@@ -18,12 +21,12 @@ test('defines a valid ESLint config', () => {
 	expect(config).toBeInstanceOf(Array);
 	expect(config.length).toBeGreaterThan(1);
 
-	config = _defineConfig(defineConfig());
+	config = eslintDefineConfig(defineConfig());
 
 	expect(config).toBeInstanceOf(Array);
 	expect(config.length).toBeGreaterThan(0);
 
-	config = _defineConfig({ extends: [defineConfig()] });
+	config = eslintDefineConfig({ extends: [defineConfig()] });
 
 	expect(config).toBeInstanceOf(Array);
 	expect(config.length).toBeGreaterThan(0);

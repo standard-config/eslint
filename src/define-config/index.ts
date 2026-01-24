@@ -1,5 +1,5 @@
 import type { Config } from 'eslint/config';
-import { defineConfig as _defineConfig } from 'eslint/config';
+import { defineConfig as eslintDefineConfig } from 'eslint/config';
 import configFormattingConfigFiles from '../config-formatting-config-files/index.ts';
 import configFormattingReact from '../config-formatting-react/index.ts';
 import configFormatting from '../config-formatting/index.ts';
@@ -13,11 +13,12 @@ import configTypeScript from '../config-typescript/index.ts';
  * Combine Standard Config with optional additional config.
  */
 export default function defineConfig(
-	...configs: Parameters<typeof _defineConfig>
+	...configs: Parameters<typeof eslintDefineConfig>
 ): Config[] {
-	const configExtension = configs.length > 0 ? _defineConfig(...configs) : [];
+	const configExtension =
+		configs.length > 0 ? eslintDefineConfig(...configs) : [];
 
-	return _defineConfig({
+	return eslintDefineConfig({
 		name: 'Standard Config',
 		files: ['**/*.{ts,tsx,cts,mts}'],
 		extends: [
@@ -35,16 +36,29 @@ export default function defineConfig(
 	});
 }
 
-function includeReactConfig([config, ...configs]: Config[]): Config[] {
-	if (!config) {
+function includeReactConfig(configs: Config[]): Config[] {
+	let react: unknown;
+
+	for (const { settings } of configs.toReversed()) {
+		if (settings?.react && typeof settings?.react === 'object') {
+			react = settings.react;
+			break;
+		}
+	}
+
+	if (!react) {
 		return configs;
 	}
 
 	return [
-		config,
-		...(typeof config.settings?.react === 'object'
-			? [configReact, configFormattingReact]
-			: []),
+		{
+			settings: { react },
+			...configReact,
+		},
+		{
+			files: ['**/*.tsx'],
+			...configFormattingReact,
+		},
 		...configs,
 	];
 }

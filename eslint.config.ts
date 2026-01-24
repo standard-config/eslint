@@ -3,11 +3,7 @@ import { defineConfig } from './src/index.ts';
 
 export default defineConfig([
 	{
-		files: [
-			'src/config/index.ts',
-			'src/config-*/index.ts',
-			'src/define-config/index.ts',
-		],
+		files: ['src/config-*/index.ts'],
 		extends: [configFormatting],
 	},
 ]);

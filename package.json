@@ -42,7 +42,8 @@
 		"typescript-eslint": "^8.53.1"
 	},
 	"peerDependencies": {
-		"eslint": ">=9"
+		"eslint": ">=9",
+		"typescript": ">=5"
 	},
 	"devDependencies": {
 		"@standard-config/prettier": "1.5.0",
