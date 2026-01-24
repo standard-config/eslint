@@ -147,8 +147,13 @@ exports[`is a valid ESLint config 1`] = `
             "elementNamePattern": "^never$",
             "groupName": "never",
           },
+          {
+            "elementNamePattern": "^react.+",
+            "groupName": "react",
+          },
         ],
         "groups": [
+          "react",
           "unknown",
           "tuple",
           "false",
