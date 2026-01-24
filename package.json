@@ -34,6 +34,7 @@
 	"packageManager": "pnpm@10.28.1",
 	"dependencies": {
 		"@eslint/compat": "^2.0.1",
+		"eslint-plugin-oxlint": "^1.41.0",
 		"eslint-plugin-perfectionist": "^5.4.0",
 		"typescript-eslint": "^8.53.1"
 	},
