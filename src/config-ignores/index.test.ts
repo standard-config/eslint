@@ -1,0 +1,36 @@
+import type { Linter } from 'eslint';
+import path from 'node:path';
+import { beforeEach, expect, expectTypeOf, test, vi } from 'vitest';
+
+beforeEach(() => {
+	vi.resetModules();
+});
+
+test('includes ignored paths from `.gitignore`', async () => {
+	vi.spyOn(process, 'cwd').mockReturnValue(
+		path.resolve(import.meta.dirname, '..', '..')
+	);
+
+	const { default: config } = await import('./index.ts');
+
+	expectTypeOf(config).toEqualTypeOf<Linter.Config[]>();
+	expect(config).toBeInstanceOf(Array);
+	expect(config).toContainEqual({
+		name: '.gitignore',
+		ignores: expect.any(Array),
+	});
+});
+
+test('omits `.gitignore` paths when `.gitignore` is missing', async () => {
+	vi.spyOn(process, 'cwd').mockReturnValue(
+		path.resolve(import.meta.dirname, '..')
+	);
+
+	const { default: config } = await import('./index.ts');
+
+	expectTypeOf(config).toEqualTypeOf<Linter.Config[]>();
+	expect(config).toBeInstanceOf(Array);
+	expect(config).toHaveLength(2);
+	expect(config[0]).toStrictEqual({});
+	expect(config[1]).toMatchSnapshot();
+});

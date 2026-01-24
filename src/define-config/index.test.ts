@@ -3,9 +3,18 @@ import { expect, test } from 'vitest';
 import defineConfig from './index.ts';
 
 test('defines a valid ESLint config', () => {
-	expect(defineConfig()).toBeInstanceOf(Array);
+	let config = defineConfig();
 
-	expect(defineConfig(globalIgnores(['**/*.js']))).toBeInstanceOf(Array);
+	expect(config).toBeInstanceOf(Array);
+	expect(config.length).toBeGreaterThan(0);
 
-	expect(defineConfig([globalIgnores(['**/*.js'])])).toBeInstanceOf(Array);
+	config = defineConfig(globalIgnores(['**/*.js']));
+
+	expect(config).toBeInstanceOf(Array);
+	expect(config.length).toBeGreaterThan(1);
+
+	config = defineConfig([globalIgnores(['**/*.js'])]);
+
+	expect(config).toBeInstanceOf(Array);
+	expect(config.length).toBeGreaterThan(1);
 });

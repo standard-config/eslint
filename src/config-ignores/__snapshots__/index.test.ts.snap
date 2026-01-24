@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`omits \`.gitignore\` paths when \`.gitignore\` is missing 1`] = `
+{
+  "ignores": [
+    "**/fixtures/**",
+  ],
+  "name": "Ignored Paths",
+}
+`;

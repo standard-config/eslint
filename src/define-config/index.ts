@@ -1,18 +1,11 @@
 import type { Config } from 'eslint/config';
 import { defineConfig as _defineConfig } from 'eslint/config';
-import configBase from '../config/index.ts';
-import includeIgnoreFile from '../include-ignore-file/index.ts';
-import includeOxlintConfig from '../include-oxlint-config/index.ts';
-
-const configIgnores = [
-	includeIgnoreFile(),
-	{
-		name: 'Ignored Paths',
-		ignores: ['**/fixtures/**'],
-	},
-];
-
-const configOxlint = includeOxlintConfig();
+import configFormattingConfigFiles from '../config-formatting-config-files/index.ts';
+import configFormatting from '../config-formatting/index.ts';
+import configIgnores from '../config-ignores/index.ts';
+import configOxlint from '../config-oxlint/index.ts';
+import configTypeScriptSettings from '../config-typescript-settings/index.ts';
+import configTypeScript from '../config-typescript/index.ts';
 
 /**
  * Combine Standard Config with optional additional config.
@@ -25,6 +18,17 @@ export default function defineConfig(
 	return _defineConfig({
 		name: 'Standard Config',
 		files: ['**/*.{ts,tsx,cts,mts}'],
-		extends: [configIgnores, configBase, configExtension, configOxlint],
+		extends: [
+			configIgnores,
+			configTypeScriptSettings,
+			configTypeScript,
+			configFormatting,
+			{
+				files: ['**/*.config.*'],
+				...configFormattingConfigFiles,
+			},
+			configExtension,
+			configOxlint,
+		],
 	});
 }
