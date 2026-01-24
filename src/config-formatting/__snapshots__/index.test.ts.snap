@@ -32,7 +32,21 @@ exports[`is a valid ESLint config 1`] = `
     "perfectionist/sort-imports": [
       "error",
       {
+        "customGroups": [
+          {
+            "elementNamePattern": "^.*/_*(mocks)_*/.*$",
+            "groupName": "mock-side-effect",
+            "selector": "side-effect",
+          },
+          {
+            "elementNamePattern": "^.*/_*(mocks)_*/.*$",
+            "groupName": "mock",
+            "selector": "import",
+          },
+        ],
         "groups": [
+          "mock-side-effect",
+          "mock",
           [
             "type-builtin",
             "type-external",
@@ -57,6 +71,9 @@ exports[`is a valid ESLint config 1`] = `
           "style",
           "side-effect",
           "side-effect-style",
+        ],
+        "internalPattern": [
+          "^(#|@/).*",
         ],
         "newlinesBetween": 0,
         "sortSideEffects": true,

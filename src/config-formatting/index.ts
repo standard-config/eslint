@@ -23,7 +23,21 @@ const config: Linter.Config = {
 		'perfectionist/sort-imports': [
 			'error',
 			{
+				customGroups: [
+					{
+						elementNamePattern: '^.*/_*(mocks)_*/.*$',
+						groupName: 'mock-side-effect',
+						selector: 'side-effect',
+					},
+					{
+						elementNamePattern: '^.*/_*(mocks)_*/.*$',
+						groupName: 'mock',
+						selector: 'import',
+					},
+				],
 				groups: [
+					'mock-side-effect',
+					'mock',
 					['type-builtin', 'type-external'],
 					'type-internal',
 					['type-parent', 'type-sibling', 'type-index'],
@@ -35,6 +49,7 @@ const config: Linter.Config = {
 					'side-effect',
 					'side-effect-style',
 				],
+				internalPattern: ['^(#|@/).*'],
 				newlinesBetween: 0,
 				sortSideEffects: true,
 				type: 'natural',
