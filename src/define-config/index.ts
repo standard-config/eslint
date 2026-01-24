@@ -5,6 +5,7 @@ import configFormattingReact from '../config-formatting-react/index.ts';
 import configFormatting from '../config-formatting/index.ts';
 import configIgnores from '../config-ignores/index.ts';
 import configOxlint from '../config-oxlint/index.ts';
+import configPrettier from '../config-prettier/index.ts';
 import configReact from '../config-react/index.ts';
 import configTypeScriptSettings from '../config-typescript-settings/index.ts';
 import configTypeScript from '../config-typescript/index.ts';
@@ -32,6 +33,7 @@ export default function defineConfig(
 			},
 			includeReactConfig(configExtension),
 			configOxlint,
+			configPrettier,
 		],
 	});
 }
