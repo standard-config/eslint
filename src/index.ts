@@ -1,4 +1,2 @@
-import defineConfig from './define-config/index.ts';
-
-export { defineConfig };
-export default defineConfig();
+/* oxlint-disable-next-line import/prefer-default-export */
+export { default as defineConfig } from './define-config/index.ts';

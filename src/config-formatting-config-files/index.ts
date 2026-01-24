@@ -1,10 +1,10 @@
 import type { Linter } from 'eslint';
-import pluginFormatting from 'eslint-plugin-perfectionist';
+import pluginPerfectionist from 'eslint-plugin-perfectionist';
 
 const config: Linter.Config = {
 	name: 'Formatting (Config Files)',
 	plugins: {
-		perfectionist: pluginFormatting,
+		perfectionist: pluginPerfectionist,
 	},
 	rules: {
 		'perfectionist/sort-objects': [

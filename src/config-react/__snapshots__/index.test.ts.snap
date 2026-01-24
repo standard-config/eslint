@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`is a valid ESLint config 1`] = `
+{
+  "name": "React",
+  "plugins": {
+    "react": [ESLint.Plugin],
+    "react-hooks": [ESLint.Plugin],
+  },
+  "rules": {
+    "react-hooks/component-hook-factories": "error",
+    "react-hooks/config": "error",
+    "react-hooks/error-boundaries": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/gating": "error",
+    "react-hooks/globals": "error",
+    "react-hooks/immutability": "error",
+    "react-hooks/incompatible-library": "error",
+    "react-hooks/preserve-manual-memoization": "error",
+    "react-hooks/purity": "error",
+    "react-hooks/refs": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/set-state-in-effect": "error",
+    "react-hooks/set-state-in-render": "error",
+    "react-hooks/static-components": "error",
+    "react-hooks/unsupported-syntax": "error",
+    "react-hooks/use-memo": "error",
+    "react-hooks/void-use-memo": "error",
+    "react/destructuring-assignment": [
+      "error",
+      "always",
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": [
+          "arrow-function",
+          "function-declaration",
+        ],
+        "unnamedComponents": "arrow-function",
+      },
+    ],
+    "react/hook-use-state": "error",
+    "react/jsx-no-constructed-context-values": "error",
+    "react/no-adjacent-inline-elements": "error",
+    "react/no-unstable-nested-components": "error",
+  },
+}
+`;

@@ -1,5 +1,5 @@
 import type { Linter } from 'eslint';
-import pluginFormatting from 'eslint-plugin-perfectionist';
+import pluginPerfectionist from 'eslint-plugin-perfectionist';
 
 /**
  * This config is intentionally limited to formatting options
@@ -8,7 +8,7 @@ import pluginFormatting from 'eslint-plugin-perfectionist';
 const config: Linter.Config = {
 	name: 'Formatting',
 	plugins: {
-		perfectionist: pluginFormatting,
+		perfectionist: pluginPerfectionist,
 	},
 	rules: {
 		'perfectionist/sort-array-includes': ['error', { type: 'natural' }],

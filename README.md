@@ -26,15 +26,17 @@ import { defineConfig } from '@standard-config/eslint';
 export default defineConfig();
 ```
 
-You can also include the config in an existing setup.
+Optionally, you can define React settings to automatically include React-related rules.
 
 ```ts
-import standardConfig from '@standard-config/eslint';
-import { defineConfig } from 'eslint/config';
+import { defineConfig } from '@standard-config/eslint';
 
 export default defineConfig({
-    files: ['**/*.ts'],
-    extends: [standardConfig],
+    settings: {
+        react: {
+            version: 'detect',
+        },
+    },
 });
 ```
 

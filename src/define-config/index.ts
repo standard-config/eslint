@@ -1,9 +1,11 @@
 import type { Config } from 'eslint/config';
 import { defineConfig as _defineConfig } from 'eslint/config';
 import configFormattingConfigFiles from '../config-formatting-config-files/index.ts';
+import configFormattingReact from '../config-formatting-react/index.ts';
 import configFormatting from '../config-formatting/index.ts';
 import configIgnores from '../config-ignores/index.ts';
 import configOxlint from '../config-oxlint/index.ts';
+import configReact from '../config-react/index.ts';
 import configTypeScriptSettings from '../config-typescript-settings/index.ts';
 import configTypeScript from '../config-typescript/index.ts';
 
@@ -27,8 +29,22 @@ export default function defineConfig(
 				files: ['**/*.config.*'],
 				...configFormattingConfigFiles,
 			},
-			configExtension,
+			includeReactConfig(configExtension),
 			configOxlint,
 		],
 	});
+}
+
+function includeReactConfig([config, ...configs]: Config[]): Config[] {
+	if (!config) {
+		return configs;
+	}
+
+	return [
+		config,
+		...(typeof config.settings?.react === 'object'
+			? [configReact, configFormattingReact]
+			: []),
+		...configs,
+	];
 }
