@@ -12,28 +12,28 @@ const config: Linter.Config = {
 			{
 				customGroups: [
 					{
-						elementNamePattern: '^as$',
 						groupName: 'as',
+						elementNamePattern: '^as$',
 					},
 					{
-						elementNamePattern: '^on.+',
 						groupName: 'callback',
+						elementNamePattern: '^on.+',
 					},
 					{
-						elementNamePattern: '^children$',
 						groupName: 'children',
+						elementNamePattern: '^children$',
 					},
 					{
-						elementNamePattern: '^key$',
 						groupName: 'key',
+						elementNamePattern: '^key$',
 					},
 					{
-						elementNamePattern: '^ref$',
 						groupName: 'ref',
+						elementNamePattern: '^ref$',
 					},
 					{
-						elementNamePattern: '^dangerously.+',
 						groupName: 'unsafe',
+						elementNamePattern: '^dangerously.+',
 					},
 				],
 				groups: [

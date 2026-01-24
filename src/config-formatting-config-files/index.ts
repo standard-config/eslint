@@ -12,32 +12,32 @@ const config: Linter.Config = {
 			{
 				customGroups: [
 					{
-						elementNamePattern: '^extends$',
 						groupName: 'extends',
+						elementNamePattern: '^extends$',
 					},
 					{
-						elementNamePattern: '^files$',
 						groupName: 'files',
+						elementNamePattern: '^files$',
 					},
 					{
-						elementNamePattern: '^(ignores|ignorePatterns)$',
 						groupName: 'ignores',
+						elementNamePattern: '^(ignores|ignorePatterns)$',
 					},
 					{
-						elementNamePattern: '^name$',
 						groupName: 'name',
+						elementNamePattern: '^(name|groupName)$',
 					},
 					{
-						elementNamePattern: '^overrides$',
 						groupName: 'overrides',
+						elementNamePattern: '^overrides$',
 					},
 					{
-						elementNamePattern: '^plugins$',
 						groupName: 'plugins',
+						elementNamePattern: '^plugins$',
 					},
 					{
-						elementNamePattern: '^rules$',
 						groupName: 'rules',
+						elementNamePattern: '^rules$',
 					},
 				],
 				groups: [

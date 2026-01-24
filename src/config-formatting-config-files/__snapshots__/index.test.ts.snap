@@ -24,7 +24,7 @@ exports[`is a valid ESLint config 1`] = `
             "groupName": "ignores",
           },
           {
-            "elementNamePattern": "^name$",
+            "elementNamePattern": "^(name|groupName)$",
             "groupName": "name",
           },
           {

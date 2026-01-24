@@ -25,13 +25,13 @@ const config: Linter.Config = {
 			{
 				customGroups: [
 					{
-						elementNamePattern: '^.*/_*(mocks)_*/.*$',
 						groupName: 'mock-side-effect',
+						elementNamePattern: '^.*/_*(mocks)_*/.*$',
 						selector: 'side-effect',
 					},
 					{
-						elementNamePattern: '^.*/_*(mocks)_*/.*$',
 						groupName: 'mock',
+						elementNamePattern: '^.*/_*(mocks)_*/.*$',
 						selector: 'import',
 					},
 				],
@@ -92,16 +92,16 @@ const config: Linter.Config = {
 			{
 				customGroups: [
 					{
-						elementNamePattern: '^false$',
 						groupName: 'false',
+						elementNamePattern: '^false$',
 					},
 					{
-						elementNamePattern: '^never$',
 						groupName: 'never',
+						elementNamePattern: '^never$',
 					},
 					{
-						elementNamePattern: '^react.+',
 						groupName: 'react',
+						elementNamePattern: '^react.+',
 					},
 				],
 				groups: [
