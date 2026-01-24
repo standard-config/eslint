@@ -1,4 +1,4 @@
-[![](https://img.shields.io/npm/v/%40standard-config%2Feslint)](https://www.npmjs.com/eslint/@standard-config/eslint)
+[![](https://img.shields.io/npm/v/%40standard-config%2Feslint)](https://www.npmjs.com/package/@standard-config/eslint)
 [![](https://img.shields.io/github/actions/workflow/status/standard-config/eslint/test.yaml)](https://github.com/standard-config/eslint/actions/workflows/test.yaml)
 [![](https://img.shields.io/codecov/c/github/standard-config/eslint)](https://codecov.io/github/standard-config/eslint)
 
