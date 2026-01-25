@@ -40,9 +40,10 @@ export default defineConfig({
 });
 ```
 
-## Recommended
+## Related
 
-Try [**@standard-config/prettier**](https://github.com/standard-config/prettier) if you’re looking for a consistent, TypeScript-first Prettier config.
+- [**@standard-config/prettier**](https://github.com/standard-config/prettier)
+- [**@standard-config/tsconfig**](https://github.com/standard-config/tsconfig)
 
 ## License
 
