@@ -4,7 +4,7 @@
 
 # @standard-config/eslint
 
-TypeScript-first ESLint config designed to complement Oxlint and Prettier.
+TypeScript-first ESLint config designed to complement Oxlint and Prettier. Enforces rules not yet [implemented in Oxlint](https://github.com/oxc-project/oxc/issues/481).
 
 ## Install
 
