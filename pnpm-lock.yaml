@@ -37,8 +37,8 @@ importers:
         specifier: 1.6.0
         version: 1.6.0(prettier@3.8.1)
       '@standard-config/tsconfig':
-        specifier: 2.0.0
-        version: 2.0.0(typescript@5.9.3)
+        specifier: 2.0.1
+        version: 2.0.1(typescript@5.9.3)
       '@types/node':
         specifier: ^22.19.7
         version: 22.19.7
@@ -816,9 +816,8 @@ packages:
     peerDependencies:
       prettier: '>=3.7'
 
-  '@standard-config/tsconfig@2.0.0':
-    resolution: {integrity: sha512-KFIR+mmhP+vdPmZshAd+OgvkW6wjXs+cUyE6ShoRDQUkTsGy0rLeaDWJzmsxnd+skm2xPeH8NU3e/VJoIbgE1A==}
-    engines: {node: '>=22'}
+  '@standard-config/tsconfig@2.0.1':
+    resolution: {integrity: sha512-dC5xPX8/aeO4xuEx1EMYKB8rSEKQbXeoP/tQWTsVaWIkkyKL7Sa1+VqrGgZ33WYkH4Q1hqucejiLY3ZzioNIvg==}
     peerDependencies:
       typescript: '>=5.9'
     peerDependenciesMeta:
@@ -2798,7 +2797,7 @@ snapshots:
       prettier-plugin-sort-json: 4.2.0(prettier@3.8.1)
       rfdc: 1.4.1
 
-  '@standard-config/tsconfig@2.0.0(typescript@5.9.3)':
+  '@standard-config/tsconfig@2.0.1(typescript@5.9.3)':
     optionalDependencies:
       typescript: 5.9.3
 
