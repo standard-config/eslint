@@ -48,7 +48,7 @@
 		"typescript": ">=5"
 	},
 	"devDependencies": {
-		"@standard-config/prettier": "1.6.0",
+		"@standard-config/prettier": "1.6.1",
 		"@standard-config/tsconfig": "2.0.2",
 		"@types/node": "^22.19.7",
 		"@vitest/coverage-v8": "4.0.18",
