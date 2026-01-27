@@ -32,7 +32,7 @@
 	"engines": {
 		"node": ">=20"
 	},
-	"packageManager": "pnpm@10.28.1",
+	"packageManager": "pnpm@10.28.2",
 	"dependencies": {
 		"@eslint/compat": "^2.0.1",
 		"eslint-config-prettier": "^10.1.8",
@@ -48,7 +48,7 @@
 		"typescript": ">=5"
 	},
 	"devDependencies": {
-		"@standard-config/prettier": "1.6.1",
+		"@standard-config/prettier": "1.7.0",
 		"@standard-config/tsconfig": "2.0.2",
 		"@types/node": "^22.19.7",
 		"@vitest/coverage-v8": "4.0.18",
