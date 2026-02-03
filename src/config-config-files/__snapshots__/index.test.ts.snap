@@ -2,7 +2,7 @@
 
 exports[`is a valid ESLint config 1`] = `
 {
-  "name": "Formatting (Config Files)",
+  "name": "Config Files",
   "plugins": {
     "perfectionist": [ESLint.Plugin],
   },

@@ -2,9 +2,7 @@ import type { Config } from 'eslint/config';
 import pluginOxlint from 'eslint-plugin-oxlint';
 import { defineConfig as eslintDefineConfig } from 'eslint/config';
 import configBase from '../config-base/index.ts';
-import configFormattingConfigFiles from '../config-formatting-config-files/index.ts';
-import configFormattingReact from '../config-formatting-react/index.ts';
-import configFormatting from '../config-formatting/index.ts';
+import configConfigFiles from '../config-config-files/index.ts';
 import configIgnores from '../config-ignores/index.ts';
 import configPrettier from '../config-prettier/index.ts';
 import configReact from '../config-react/index.ts';
@@ -24,10 +22,9 @@ export default function defineConfig(
 		extends: [
 			configIgnores,
 			configBase,
-			configFormatting,
 			{
 				files: ['**/*.config.{ts,cts,mts}'],
-				...configFormattingConfigFiles,
+				...configConfigFiles,
 			},
 			includeReactConfig(configExtension),
 			pluginOxlint.configs['flat/all'],
@@ -54,10 +51,6 @@ function includeReactConfig(configs: Config[]): Config[] {
 		{
 			settings: { react },
 			...configReact,
-		},
-		{
-			files: ['**/*.tsx'],
-			...configFormattingReact,
 		},
 		...configs,
 	];

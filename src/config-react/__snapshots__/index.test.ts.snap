@@ -4,10 +4,53 @@ exports[`is a valid ESLint config 1`] = `
 {
   "name": "React",
   "plugins": {
+    "perfectionist": [ESLint.Plugin],
     "react": [ESLint.Plugin],
     "react-hooks": [ESLint.Plugin],
   },
   "rules": {
+    "perfectionist/sort-jsx-props": [
+      "error",
+      {
+        "customGroups": [
+          {
+            "elementNamePattern": "^as$",
+            "groupName": "as",
+          },
+          {
+            "elementNamePattern": "^on.+",
+            "groupName": "callback",
+          },
+          {
+            "elementNamePattern": "^children$",
+            "groupName": "children",
+          },
+          {
+            "elementNamePattern": "^key$",
+            "groupName": "key",
+          },
+          {
+            "elementNamePattern": "^ref$",
+            "groupName": "ref",
+          },
+          {
+            "elementNamePattern": "^dangerously.+",
+            "groupName": "unsafe",
+          },
+        ],
+        "groups": [
+          "key",
+          "ref",
+          "as",
+          "unknown",
+          "shorthand-prop",
+          "callback",
+          "children",
+          "unsafe",
+        ],
+        "type": "unsorted",
+      },
+    ],
     "react-hooks/component-hook-factories": "error",
     "react-hooks/config": "error",
     "react-hooks/error-boundaries": "error",

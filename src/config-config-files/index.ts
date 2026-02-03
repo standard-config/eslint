@@ -1,8 +1,8 @@
-import type { Linter } from 'eslint';
+import type { LinterConfigEntry } from '../types/index.d.ts';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
 
-const config: Linter.Config = {
-	name: 'Formatting (Config Files)',
+const config: LinterConfigEntry = {
+	name: 'Config Files',
 	plugins: {
 		perfectionist: pluginPerfectionist,
 	},

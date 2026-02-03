@@ -1,17 +1,63 @@
-import type { ESLint, Linter } from 'eslint';
+import type { ESLint } from 'eslint';
+import type { LinterConfigEntry } from '../types/index.d.ts';
+import pluginPerfectionist from 'eslint-plugin-perfectionist';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 
 /**
- * This config is intentionally limited to rules not supported by Oxlint.
+ * This config is intentionally limited to rules not supported by Oxlint
+ * and formatting options not supported by Prettier.
  */
-const config: Linter.Config = {
+const config: LinterConfigEntry = {
 	name: 'React',
 	plugins: {
+		'perfectionist': pluginPerfectionist,
 		'react': pluginReact,
 		'react-hooks': pluginReactHooks as ESLint.Plugin,
 	},
 	rules: {
+		'perfectionist/sort-jsx-props': [
+			'error',
+			{
+				customGroups: [
+					{
+						groupName: 'as',
+						elementNamePattern: '^as$',
+					},
+					{
+						groupName: 'callback',
+						elementNamePattern: '^on.+',
+					},
+					{
+						groupName: 'children',
+						elementNamePattern: '^children$',
+					},
+					{
+						groupName: 'key',
+						elementNamePattern: '^key$',
+					},
+					{
+						groupName: 'ref',
+						elementNamePattern: '^ref$',
+					},
+					{
+						groupName: 'unsafe',
+						elementNamePattern: '^dangerously.+',
+					},
+				],
+				groups: [
+					'key',
+					'ref',
+					'as',
+					'unknown',
+					'shorthand-prop',
+					'callback',
+					'children',
+					'unsafe',
+				],
+				type: 'unsorted',
+			},
+		],
 		'react/destructuring-assignment': ['error', 'always'],
 		'react/function-component-definition': [
 			'error',
