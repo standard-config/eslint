@@ -5,9 +5,19 @@ import tseslint from 'typescript-eslint';
  * This config is intentionally limited to rules not supported by Oxlint.
  */
 const config: Linter.Config = {
-	name: 'TypeScript',
+	name: 'Base Config',
 	plugins: {
 		'@typescript-eslint': tseslint.plugin,
+	},
+	languageOptions: {
+		parser: tseslint.parser,
+		parserOptions: {
+			projectService: true,
+		},
+	},
+	linterOptions: {
+		reportUnusedDisableDirectives: 'error',
+		reportUnusedInlineConfigs: 'error',
 	},
 	rules: {
 		/* oxlint-disable-next-line unicorn/no-useless-spread */

@@ -20,6 +20,8 @@
 		"oxlint",
 		"prettier",
 		"react",
+		"standard-config",
+		"type-aware",
 		"typescript"
 	],
 	"files": [
@@ -34,9 +36,9 @@
 	},
 	"packageManager": "pnpm@10.28.2",
 	"dependencies": {
-		"@eslint/compat": "^2.0.1",
+		"@eslint/compat": "^2.0.2",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-oxlint": "^1.42.0",
+		"eslint-plugin-oxlint": "^1.43.0",
 		"eslint-plugin-perfectionist": "^5.4.0",
 		"eslint-plugin-prettier": "^5.5.5",
 		"eslint-plugin-react": "^7.37.5",
@@ -50,7 +52,7 @@
 	"devDependencies": {
 		"@standard-config/prettier": "1.7.0",
 		"@standard-config/tsconfig": "2.0.2",
-		"@types/node": "^22.19.7",
+		"@types/node": "^22.19.8",
 		"@vitest/coverage-v8": "4.0.18",
 		"eslint": "9.39.2",
 		"husky": "9.1.7",

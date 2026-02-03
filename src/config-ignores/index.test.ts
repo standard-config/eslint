@@ -13,9 +13,8 @@ test('includes ignored paths from `.gitignore`', async () => {
 
 	const { default: config } = await import('./index.ts');
 
-	expectTypeOf(config).toEqualTypeOf<Linter.Config[]>();
-	expect(config).toBeInstanceOf(Array);
-	expect(config).toContainEqual({
+	expectTypeOf(config).toEqualTypeOf<Linter.Config>();
+	expect(config).toStrictEqual({
 		name: '.gitignore',
 		ignores: expect.any(Array),
 	});
@@ -28,9 +27,6 @@ test('omits `.gitignore` paths when `.gitignore` is missing', async () => {
 
 	const { default: config } = await import('./index.ts');
 
-	expectTypeOf(config).toEqualTypeOf<Linter.Config[]>();
-	expect(config).toBeInstanceOf(Array);
-	expect(config).toHaveLength(2);
-	expect(config[0]).toStrictEqual({});
-	expect(config[1]).toMatchSnapshot();
+	expectTypeOf(config).toEqualTypeOf<Linter.Config>();
+	expect(config).toStrictEqual({});
 });

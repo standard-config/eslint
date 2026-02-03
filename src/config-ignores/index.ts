@@ -6,12 +6,8 @@ import path from 'node:path';
 const configPath = path.resolve('.gitignore');
 const configExists = fs.existsSync(configPath);
 
-const config: Linter.Config[] = [
-	configExists ? _includeIgnoreFile(configPath, '.gitignore') : {},
-	{
-		name: 'Ignored Paths',
-		ignores: ['**/fixtures/**'],
-	},
-];
+const config: Linter.Config = configExists
+	? _includeIgnoreFile(configPath, '.gitignore')
+	: {};
 
 export default config;
