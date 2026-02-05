@@ -42,6 +42,7 @@ export default defineConfig({
 
 ## Related
 
+- [**@standard-config/oxlint**](https://github.com/standard-config/oxlint)
 - [**@standard-config/prettier**](https://github.com/standard-config/prettier)
 - [**@standard-config/tsconfig**](https://github.com/standard-config/tsconfig)
 

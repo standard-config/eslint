@@ -39,7 +39,7 @@
 		"@eslint/compat": "^2.0.2",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-oxlint": "^1.43.0",
-		"eslint-plugin-perfectionist": "^5.4.0",
+		"eslint-plugin-perfectionist": "^5.5.0",
 		"eslint-plugin-prettier": "^5.5.5",
 		"eslint-plugin-react": "^7.37.5",
 		"eslint-plugin-react-hooks": "^7.0.1",
@@ -50,6 +50,7 @@
 		"typescript": ">=5"
 	},
 	"devDependencies": {
+		"@standard-config/oxlint": "1.0.1",
 		"@standard-config/prettier": "1.8.1",
 		"@standard-config/tsconfig": "2.0.2",
 		"@types/node": "^22.19.8",
@@ -67,11 +68,11 @@
 	},
 	"scripts": {
 		"build": "tsdown",
-		"fix": "pnpm format && pnpm lint",
-		"format": "prettier --write --ignore-unknown .",
+		"fix": "pnpm format && pnpm lint && pnpm format",
+		"format": "prettier --ignore-unknown --log-level=warn --write .",
 		"format:check": "prettier --check --ignore-unknown .",
-		"lint": "oxlint --fix --type-aware --type-check --deny-warnings --report-unused-disable-directives && eslint . --fix",
-		"lint:check": "oxlint --type-aware --type-check --deny-warnings --report-unused-disable-directives && eslint .",
+		"lint": "oxlint --fix --report-unused-disable-directives --type-aware --type-check && eslint --fix .",
+		"lint:check": "oxlint --deny-warnings --report-unused-disable-directives --type-aware --type-check && eslint .",
 		"prepack": "pnpm run '/^(format:check|lint:check|test|typecheck)$/' && pnpm build",
 		"prepare": "husky",
 		"test": "vitest run",
