@@ -4,7 +4,6 @@ import { defineConfig as eslintDefineConfig } from 'eslint/config';
 import configBase from '../config-base/index.ts';
 import configConfigFiles from '../config-config-files/index.ts';
 import configIgnores from '../config-ignores/index.ts';
-import configPrettier from '../config-prettier/index.ts';
 import configReact from '../config-react/index.ts';
 
 /**
@@ -28,7 +27,6 @@ export default function defineConfig(
 			},
 			includeReactConfig(configExtension),
 			pluginOxlint.configs['flat/all'],
-			configPrettier,
 		],
 	});
 }
