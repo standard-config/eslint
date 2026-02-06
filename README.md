@@ -4,7 +4,7 @@
 
 # @standard-config/eslint
 
-TypeScript-first ESLint config designed to complement Oxlint. Enforces rules not yet [implemented in Oxlint](https://github.com/oxc-project/oxc/issues/481).
+TypeScript-first ESLint config designed to complement [**@standard-config/oxlint**](https://github.com/standard-config/oxlint). Enforces rules not yet [implemented in Oxlint](https://github.com/oxc-project/oxc/issues/481).
 
 ## Install
 
