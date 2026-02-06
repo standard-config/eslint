@@ -28,8 +28,8 @@ importers:
         version: 8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
     devDependencies:
       '@standard-config/oxlint':
-        specifier: 1.0.1
-        version: 1.0.1(oxlint-tsgolint@0.11.4)(oxlint@1.43.0(oxlint-tsgolint@0.11.4))
+        specifier: 1.0.2
+        version: 1.0.2(oxlint-tsgolint@0.11.4)(oxlint@1.43.0(oxlint-tsgolint@0.11.4))
       '@standard-config/prettier':
         specifier: 1.8.1
         version: 1.8.1(prettier@3.8.1)
@@ -835,12 +835,15 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@standard-config/oxlint@1.0.1':
-    resolution: {integrity: sha512-3N5XAbBDBWFWTYQDmDyqk6m65ExPMLbgPxk0IH9HCzEsSKHXUm3mV9XOWWhHaZ2Rf4bLNZyd0RHp7EgITTMr5A==}
-    engines: {node: '>=22'}
+  '@standard-config/oxlint@1.0.2':
+    resolution: {integrity: sha512-TkefEH/+rc0uAox72F8kcbBJe2vw2CSw/zPXYDCFnQdsHt3X0vsxph5vFcr1BjLvFXmxkYgWbkdX0FiA/Mnibw==}
+    engines: {node: '>=20'}
     peerDependencies:
       oxlint: '>=1.43'
       oxlint-tsgolint: '>=0.11'
+    peerDependenciesMeta:
+      oxlint-tsgolint:
+        optional: true
 
   '@standard-config/prettier@1.8.1':
     resolution: {integrity: sha512-Mpfpn631tyaMtyAeXvzdPdDr93f9c1IxXbTJLZ4mCePjoBk7ZIkavMCNxg+cUTfsleiwlz5gvghlNCyUWpsk9w==}
@@ -2817,11 +2820,12 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.57.1':
     optional: true
 
-  '@standard-config/oxlint@1.0.1(oxlint-tsgolint@0.11.4)(oxlint@1.43.0(oxlint-tsgolint@0.11.4))':
+  '@standard-config/oxlint@1.0.2(oxlint-tsgolint@0.11.4)(oxlint@1.43.0(oxlint-tsgolint@0.11.4))':
     dependencies:
       oxlint: 1.43.0(oxlint-tsgolint@0.11.4)
-      oxlint-tsgolint: 0.11.4
       rfdc: 1.4.1
+    optionalDependencies:
+      oxlint-tsgolint: 0.11.4
 
   '@standard-config/prettier@1.8.1(prettier@3.8.1)':
     dependencies:
