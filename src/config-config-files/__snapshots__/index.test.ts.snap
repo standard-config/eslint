@@ -32,6 +32,10 @@ exports[`is a valid ESLint config 1`] = `
             "groupName": "overrides",
           },
           {
+            "elementNamePattern": "^parser$",
+            "groupName": "parser",
+          },
+          {
             "elementNamePattern": "^plugins$",
             "groupName": "plugins",
           },
@@ -46,6 +50,7 @@ exports[`is a valid ESLint config 1`] = `
           "extends",
           "ignores",
           "plugins",
+          "parser",
           "unknown",
           "rules",
           "overrides",

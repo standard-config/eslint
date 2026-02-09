@@ -32,6 +32,10 @@ const config: LinterConfigEntry = {
 						elementNamePattern: '^overrides$',
 					},
 					{
+						groupName: 'parser',
+						elementNamePattern: '^parser$',
+					},
+					{
 						groupName: 'plugins',
 						elementNamePattern: '^plugins$',
 					},
@@ -46,6 +50,7 @@ const config: LinterConfigEntry = {
 					'extends',
 					'ignores',
 					'plugins',
+					'parser',
 					'unknown',
 					'rules',
 					'overrides',
