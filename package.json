@@ -53,7 +53,7 @@
 		}
 	},
 	"devDependencies": {
-		"@standard-config/oxlint": "1.0.3",
+		"@standard-config/oxlint": "1.1.0",
 		"@standard-config/prettier": "1.9.1",
 		"@standard-config/tsconfig": "2.0.2",
 		"@types/node": "22.19.11",
