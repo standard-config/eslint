@@ -1,4 +1,5 @@
 import type { Config } from 'eslint/config';
+import type { StandardConfig, StandardConfigArray } from '../types/index.d.ts';
 import pluginOxlint from 'eslint-plugin-oxlint';
 import { defineConfig as eslintDefineConfig } from 'eslint/config';
 import configBase from '../config-base/index.ts';
@@ -10,11 +11,8 @@ import configReact from '../config-react/index.ts';
  * Combine Standard Config with optional additional config.
  */
 export default function defineConfig(
-	...configs: Parameters<typeof eslintDefineConfig>
+	...configs: StandardConfigArray
 ): Config[] {
-	const configExtension =
-		configs.length > 0 ? eslintDefineConfig(...configs) : [];
-
 	return eslintDefineConfig({
 		name: 'Standard Config',
 		files: ['**/*.{ts,tsx,cts,mts}'],
@@ -25,31 +23,38 @@ export default function defineConfig(
 				files: ['**/*.config.{ts,cts,mts}'],
 				...configConfigFiles,
 			},
-			includeReactConfig(configExtension),
+			...normalizeExtensionConfigs(configs),
 			pluginOxlint.configs['flat/all'],
 		],
 	});
 }
 
-function includeReactConfig(configs: Config[]): Config[] {
-	let react: unknown;
+function normalizeExtensionConfigs(configs: StandardConfigArray) {
+	const configArray = configs.flat();
+	const extensions: Array<Config | Config[]> = [];
 
-	for (const { settings } of configs.toReversed()) {
-		if (settings?.react && typeof settings?.react === 'object') {
-			react = settings.react;
-			break;
-		}
+	if (configArray.length === 0) {
+		return extensions;
 	}
 
-	if (!react) {
-		return configs;
+	if ((configArray[0] as StandardConfig).react) {
+		extensions.push(configReact);
 	}
 
-	return [
-		{
-			settings: { react },
-			...configReact,
-		},
-		...configs,
-	];
+	extensions.push(
+		eslintDefineConfig(
+			// Ensure `react` doesn’t break the expected config structure
+			configArray.map((configEntry) => {
+				if (Array.isArray(configEntry)) {
+					return configEntry;
+				}
+
+				/* oxlint-disable-next-line eslint/no-unused-vars */
+				const { react, ...config } = configEntry as StandardConfig;
+				return config;
+			})
+		)
+	);
+
+	return extensions;
 }

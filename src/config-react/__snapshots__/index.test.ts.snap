@@ -88,5 +88,10 @@ exports[`is a valid ESLint config 1`] = `
     "react/no-adjacent-inline-elements": "error",
     "react/no-unstable-nested-components": "error",
   },
+  "settings": {
+    "react": {
+      "version": "detect",
+    },
+  },
 }
 `;

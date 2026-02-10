@@ -15,6 +15,11 @@ const config: LinterConfigEntry = {
 		'react': pluginReact,
 		'react-hooks': pluginReactHooks as ESLint.Plugin,
 	},
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
 	rules: {
 		'perfectionist/sort-jsx-props': [
 			'error',

@@ -26,17 +26,15 @@ import { defineConfig } from '@standard-config/eslint';
 export default defineConfig();
 ```
 
-Optionally, you can define React settings to automatically include React-related rules.
+### React
+
+Standard Config includes a set of React-related rules that are off by default. You can enable them by setting `react: true` in the root of your config.
 
 ```ts
 import { defineConfig } from '@standard-config/eslint';
 
 export default defineConfig({
-    settings: {
-        react: {
-            version: 'detect',
-        },
-    },
+    react: true,
 });
 ```
 
