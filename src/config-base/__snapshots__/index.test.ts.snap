@@ -6,6 +6,7 @@ exports[`is a valid ESLint config 1`] = `
     "parser": [ESLint.Parser],
     "parserOptions": {
       "projectService": true,
+      "warnOnUnsupportedTypeScriptVersion": false,
     },
   },
   "linterOptions": {

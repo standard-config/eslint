@@ -16,6 +16,7 @@ const config: LinterConfigEntry = {
 		parser: tseslint.parser,
 		parserOptions: {
 			projectService: true,
+			warnOnUnsupportedTypeScriptVersion: false,
 		},
 	},
 	linterOptions: {
