@@ -7,6 +7,7 @@ exports[`is a valid ESLint config 1`] = `
     "perfectionist": [ESLint.Plugin],
     "react": [ESLint.Plugin],
     "react-hooks": [ESLint.Plugin],
+    "react-naming-convention": [ESLint.Plugin],
     "react-x": [ESLint.Plugin],
   },
   "rules": {
@@ -70,6 +71,10 @@ exports[`is a valid ESLint config 1`] = `
     "react-hooks/unsupported-syntax": "error",
     "react-hooks/use-memo": "error",
     "react-hooks/void-use-memo": "error",
+    "react-naming-convention/component-name": "error",
+    "react-naming-convention/context-name": "error",
+    "react-naming-convention/ref-name": "error",
+    "react-naming-convention/use-state": "error",
     "react-x/jsx-dollar": "error",
     "react-x/jsx-key-before-spread": "error",
     "react-x/jsx-no-iife": "error",

@@ -3,6 +3,7 @@ import type { LinterConfigEntry } from '../types/index.d.ts';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
+import pluginReactNamingConvention from 'eslint-plugin-react-naming-convention';
 import pluginReactX from 'eslint-plugin-react-x';
 
 /**
@@ -15,6 +16,7 @@ const config: LinterConfigEntry = {
 		'perfectionist': pluginPerfectionist,
 		'react': pluginReact,
 		'react-hooks': pluginReactHooks as ESLint.Plugin,
+		'react-naming-convention': pluginReactNamingConvention,
 		'react-x': pluginReactX,
 	},
 	settings: {
@@ -65,6 +67,10 @@ const config: LinterConfigEntry = {
 				type: 'unsorted',
 			},
 		],
+		'react-naming-convention/component-name': 'error',
+		'react-naming-convention/context-name': 'error',
+		'react-naming-convention/ref-name': 'error',
+		'react-naming-convention/use-state': 'error',
 		'react-x/jsx-dollar': 'error',
 		'react-x/jsx-key-before-spread': 'error',
 		'react-x/jsx-no-iife': 'error',
