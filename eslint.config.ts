@@ -4,5 +4,6 @@ export default defineConfig([
 	{
 		files: ['src/config-*/index.ts'],
 		extends: [configConfigFiles],
+		react: true,
 	},
 ]);
