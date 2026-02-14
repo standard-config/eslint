@@ -10,6 +10,7 @@ engine:
 permissions:
     actions: read
     contents: read
+    issues: read
     pull-requests: read
 
 safe-outputs:
