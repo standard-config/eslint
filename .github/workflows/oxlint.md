@@ -3,6 +3,10 @@ on:
     schedule: weekly
     workflow_dispatch:
 
+engine:
+    id: copilot
+    model: gpt-5.3-codex
+
 permissions:
     actions: read
     contents: read
