@@ -59,7 +59,7 @@ Detect ESLint rules enabled in this repository that are now covered by the local
 2. Before making any changes, check existing pull requests (open and closed).
     - If a pull request with the exact same title already exists, skip that rule.
 
-3. Create a dedicated branch for the rule: `disable/<rule-name>`.
+3. Create a dedicated branch for the rule: `oxlint/<rule-name>`.
 
 4. Remove the rule from every config location where it appears.
 

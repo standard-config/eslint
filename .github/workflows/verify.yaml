@@ -7,6 +7,13 @@ on:
   pull_request:
     branches:
       - main
+  workflow_run:
+    workflows:
+      - Oxlint
+    types:
+      - completed
+    branches:
+      - oxlint/**
 
 permissions:
   contents: read
