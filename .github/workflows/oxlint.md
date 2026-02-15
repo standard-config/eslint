@@ -19,7 +19,6 @@ safe-outputs:
         draft: false
         fallback-as-issue: true
         footer: false
-    noop: false
 ---
 
 ## Goal
