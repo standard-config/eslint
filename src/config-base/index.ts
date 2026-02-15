@@ -117,13 +117,6 @@ const config: LinterConfigEntry = {
 				},
 			},
 		],
-		'@typescript-eslint/consistent-type-assertions': [
-			'error',
-			{
-				assertionStyle: 'as',
-				objectLiteralTypeAssertions: 'allow-as-parameter',
-			},
-		],
 		'@typescript-eslint/consistent-type-exports': [
 			'error',
 			{ fixMixedExportsWithInlineTypeSpecifier: true },

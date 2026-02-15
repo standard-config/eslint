@@ -111,13 +111,6 @@ exports[`is a valid ESLint config 1`] = `
         },
       },
     ],
-    "@typescript-eslint/consistent-type-assertions": [
-      "error",
-      {
-        "assertionStyle": "as",
-        "objectLiteralTypeAssertions": "allow-as-parameter",
-      },
-    ],
     "@typescript-eslint/consistent-type-exports": [
       "error",
       {
