@@ -109,8 +109,10 @@ const config: LinterConfigEntry = {
 			)
 				.filter(
 					(rule) =>
-						rule !== 'react-hooks/exhaustive-deps' &&
-						rule !== 'react-hooks/rules-of-hooks'
+						![
+							'react-hooks/exhaustive-deps',
+							'react-hooks/rules-of-hooks',
+						].includes(rule)
 				)
 				.map((rule) => [rule, 'error'])
 		),

@@ -1,6 +1,5 @@
 import type { Config } from 'eslint/config';
 import type { StandardConfig, StandardConfigArray } from '../types/index.d.ts';
-import pluginOxlint from 'eslint-plugin-oxlint';
 import { defineConfig as eslintDefineConfig } from 'eslint/config';
 import configBase from '../config-base/index.ts';
 import configConfigFiles from '../config-config-files/index.ts';
@@ -24,7 +23,6 @@ export default function defineConfig(
 				...configConfigFiles,
 			},
 			...normalizeExtensionConfigs(configs),
-			pluginOxlint.configs['flat/all'],
 		],
 	});
 }

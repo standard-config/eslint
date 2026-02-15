@@ -37,7 +37,6 @@
 	"dependencies": {
 		"@eslint/compat": "^2.0.2",
 		"@stylistic/eslint-plugin": "^5.8.0",
-		"eslint-plugin-oxlint": "^1.46.0",
 		"eslint-plugin-perfectionist": "^5.5.0",
 		"eslint-plugin-react": "^7.37.5",
 		"eslint-plugin-react-hooks": "^7.0.1",
