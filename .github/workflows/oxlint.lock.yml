@@ -20,13 +20,13 @@
 # For more information: https://github.com/github/gh-aw/blob/main/.github/aw/github-agentic-workflows.md
 #
 #
-# frontmatter-hash: 30086d0b907beb5ecbb363a4481fae287d155fd1145536cf8de497ffb4b53576
+# frontmatter-hash: 645d9d4660441f63a03f4f903279d323753e4ec498a149c63818646c3d8bc67e
 
 name: "Oxlint"
 "on":
   schedule:
-  - cron: "30 6 * * 2"
-    # Friendly format: weekly (scattered)
+  - cron: "30 6 * * *"
+    # Friendly format: daily (scattered)
   workflow_dispatch:
 
 permissions: {}

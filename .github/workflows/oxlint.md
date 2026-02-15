@@ -1,6 +1,6 @@
 ---
 on:
-    schedule: weekly
+    schedule: daily
     workflow_dispatch:
 
 engine:
@@ -62,7 +62,7 @@ Detect ESLint rules enabled in this repository that are now covered by the local
 
 4. Remove the rule from every config location where it appears.
 
-5. Update any tests and snapshots impacted by that single change.
+5. Update any tests and snapshots impacted by that change, then run `pnpm fix`.
 
 6. Commit only what is required for that rule.
 
@@ -70,3 +70,4 @@ Detect ESLint rules enabled in this repository that are now covered by the local
     - The established title.
     - The equivalent Oxlint configuration.
     - Evidence from local `pnpm oxlint --rules` output showing the replacement exists.
+    - No `Validation` section and no test output in the pull request body.
