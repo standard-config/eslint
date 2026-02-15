@@ -30,7 +30,7 @@ Detect ESLint rules enabled in this repository that are now covered by the local
 - Never push to `main`.
 - Use only local data from this repository and installed packages.
 - Keep each pull request minimal and scoped to a single rule, processed from a clean branch state.
-- If pull request creation is blocked by policy, report it via the fallback issue output.
+- If pull request creation is blocked by policy, report it via the fallback issue output and fail the workflow run.
 
 ## Detection
 
@@ -58,7 +58,7 @@ Detect ESLint rules enabled in this repository that are now covered by the local
 2. Before making any changes, check existing pull requests (open and closed).
     - If a pull request with the exact same title already exists, skip that rule.
 
-3. Create a dedicated branch for the rule: `disable/<plugin-rule-name>`.
+3. Create a dedicated branch for the rule: `disable/<rule-name>`.
 
 4. Remove the rule from every config location where it appears.
 
@@ -69,5 +69,4 @@ Detect ESLint rules enabled in this repository that are now covered by the local
 7. Open a pull request with:
     - The established title.
     - The equivalent Oxlint configuration.
-    - Evidence from local `pnpm oxlint --rules` output showing the replacement exists.
     - No `Validation` section and no test output in the pull request body.
