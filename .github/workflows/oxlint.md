@@ -17,7 +17,7 @@ safe-outputs:
     create-pull-request:
         base-branch: main
         draft: false
-        fallback-as-issue: false
+        fallback-as-issue: true
 ---
 
 ## Goal
@@ -30,6 +30,7 @@ Detect ESLint rules enabled in this repository that are now covered by the local
 - Never push to `main`.
 - Use only local data from this repository and installed packages.
 - Keep each pull request minimal and scoped to a single rule, processed from a clean branch state.
+- If pull request creation is blocked by policy, report it via the fallback issue output.
 
 ## Detection
 
@@ -52,12 +53,12 @@ Detect ESLint rules enabled in this repository that are now covered by the local
     Disable `plugin/rule-name`
     ```
 
-    Use backticks around the rule name. For a core ESLint rule, use `eslint/rule-name`.
+    Use backticks around the rule name. For a core ESLint rule, use `eslint/rule-name`. Use the same format for the first commit message.
 
 2. Before making any changes, check existing pull requests (open and closed).
     - If a pull request with the exact same title already exists, skip that rule.
 
-3. Create a dedicated branch for the rule: `automation/disable-<plugin-rule-name>`.
+3. Create a dedicated branch for the rule: `disable/<plugin-rule-name>`.
 
 4. Remove the rule from every config location where it appears.
 

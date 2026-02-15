@@ -20,7 +20,7 @@
 # For more information: https://github.com/github/gh-aw/blob/main/.github/aw/github-agentic-workflows.md
 #
 #
-# frontmatter-hash: 1c4ba907373a569510fe34257f9223e70d19992ac5627d7ff8f94cc966e310c2
+# frontmatter-hash: 30086d0b907beb5ecbb363a4481fae287d155fd1145536cf8de497ffb4b53576
 
 name: "Oxlint"
 "on":
@@ -988,6 +988,7 @@ jobs:
     runs-on: ubuntu-slim
     permissions:
       contents: write
+      issues: write
       pull-requests: write
     timeout-minutes: 15
     env:
@@ -1047,7 +1048,7 @@ jobs:
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         env:
           GH_AW_AGENT_OUTPUT: ${{ env.GH_AW_AGENT_OUTPUT }}
-          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"create_pull_request\":{\"base_branch\":\"main\",\"draft\":false,\"fallback_as_issue\":false,\"max\":1,\"max_patch_size\":1024},\"missing_data\":{},\"missing_tool\":{}}"
+          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"create_pull_request\":{\"base_branch\":\"main\",\"draft\":false,\"fallback_as_issue\":true,\"max\":1,\"max_patch_size\":1024},\"missing_data\":{},\"missing_tool\":{}}"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
