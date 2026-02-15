@@ -56,7 +56,6 @@ exports[`is a valid ESLint config 1`] = `
     "react-hooks/component-hook-factories": "error",
     "react-hooks/config": "error",
     "react-hooks/error-boundaries": "error",
-    "react-hooks/exhaustive-deps": "error",
     "react-hooks/gating": "error",
     "react-hooks/globals": "error",
     "react-hooks/immutability": "error",
