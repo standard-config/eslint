@@ -107,7 +107,11 @@ const config: LinterConfigEntry = {
 			Object.keys(
 				pluginReactHooks.configs.flat['recommended-latest'].rules
 			)
-				.filter((rule) => rule !== 'react-hooks/exhaustive-deps')
+				.filter(
+					(rule) =>
+						rule !== 'react-hooks/exhaustive-deps' &&
+						rule !== 'react-hooks/rules-of-hooks'
+				)
 				.map((rule) => [rule, 'error'])
 		),
 	},
