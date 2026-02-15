@@ -18,6 +18,8 @@ safe-outputs:
         base-branch: main
         draft: false
         fallback-as-issue: true
+        footer: false
+    noop: false
 ---
 
 ## Goal
