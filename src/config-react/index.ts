@@ -106,7 +106,9 @@ const config: LinterConfigEntry = {
 		...Object.fromEntries(
 			Object.keys(
 				pluginReactHooks.configs.flat['recommended-latest'].rules
-			).map((rule) => [rule, 'error'])
+			)
+				.filter((rule) => rule !== 'react-hooks/exhaustive-deps')
+				.map((rule) => [rule, 'error'])
 		),
 	},
 };
