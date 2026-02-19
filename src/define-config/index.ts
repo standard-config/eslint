@@ -36,7 +36,10 @@ function normalizeExtensionConfigs(configs: StandardConfigArray) {
 	}
 
 	if ((configArray[0] as StandardConfig).react) {
-		extensions.push(configReact);
+		extensions.push({
+			files: ['**/*.tsx'],
+			...configReact,
+		});
 	}
 
 	extensions.push(
