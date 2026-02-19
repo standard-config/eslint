@@ -117,10 +117,6 @@ const config: LinterConfigEntry = {
 				},
 			},
 		],
-		'@typescript-eslint/consistent-type-exports': [
-			'error',
-			{ fixMixedExportsWithInlineTypeSpecifier: true },
-		],
 		'@typescript-eslint/no-unnecessary-qualifier': 'error',
 		'@typescript-eslint/no-useless-default-assignment': 'error',
 		'@typescript-eslint/parameter-properties': [
