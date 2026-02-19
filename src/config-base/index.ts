@@ -137,41 +137,6 @@ const config: LinterConfigEntry = {
 			},
 		],
 		'perfectionist/sort-exports': ['error', { type: 'natural' }],
-		'perfectionist/sort-imports': [
-			'error',
-			{
-				customGroups: [
-					{
-						groupName: 'mock-side-effect',
-						elementNamePattern: '^.*/_*(mocks)_*/.*$',
-						selector: 'side-effect',
-					},
-					{
-						groupName: 'mock',
-						elementNamePattern: '^.*/_*(mocks)_*/.*$',
-						selector: 'import',
-					},
-				],
-				groups: [
-					'mock-side-effect',
-					'mock',
-					['type-builtin', 'type-external'],
-					'type-internal',
-					['type-parent', 'type-sibling', 'type-index'],
-					['value-builtin', 'value-external'],
-					'value-internal',
-					['value-parent', 'value-sibling', 'value-index'],
-					'unknown',
-					'style',
-					'side-effect',
-					'side-effect-style',
-				],
-				internalPattern: ['^(#|@/).*'],
-				newlinesBetween: 0,
-				sortSideEffects: true,
-				type: 'natural',
-			},
-		],
 		'perfectionist/sort-interfaces': [
 			'error',
 			{
