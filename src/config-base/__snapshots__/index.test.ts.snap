@@ -113,12 +113,6 @@ exports[`is a valid ESLint config 1`] = `
     ],
     "@typescript-eslint/no-unnecessary-qualifier": "error",
     "@typescript-eslint/no-useless-default-assignment": "error",
-    "@typescript-eslint/parameter-properties": [
-      "error",
-      {
-        "prefer": "parameter-property",
-      },
-    ],
     "@typescript-eslint/prefer-readonly": "error",
     "camelcase": [
       "error",

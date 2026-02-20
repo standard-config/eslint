@@ -118,10 +118,6 @@ const config: LinterConfigEntry = {
 		],
 		'@typescript-eslint/no-unnecessary-qualifier': 'error',
 		'@typescript-eslint/no-useless-default-assignment': 'error',
-		'@typescript-eslint/parameter-properties': [
-			'error',
-			{ prefer: 'parameter-property' },
-		],
 		'@typescript-eslint/prefer-readonly': 'error',
 		'perfectionist/sort-array-includes': ['error', { type: 'natural' }],
 		'perfectionist/sort-classes': [
