@@ -39,7 +39,9 @@ Detect ESLint rules enabled in this repository that are now covered by the local
 
 2. List local Oxlint rules with `pnpm oxlint --rules`.
 
-3. Compare the enabled ESLint rules against the Oxlint rule list. Rule names don’t always match.
+3. Compare the enabled ESLint rules against the Oxlint rule list.
+    - Keep in mind rule names don’t always match.
+    - Exclude rules in the `nursery` category.
 
 4. A candidate rule is an ESLint rule enabled in this repo that now exists in Oxlint.
     - If no candidates are found, exit successfully without creating branches, commits, or pull requests.
