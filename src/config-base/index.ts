@@ -29,7 +29,6 @@ const config: LinterConfigEntry = {
 		/* oxlint-disable-next-line unicorn/no-useless-spread */
 		...{
 			'camelcase': ['error', { properties: 'always' }],
-			'dot-notation': 'error',
 			'func-name-matching': [
 				'error',
 				'never',

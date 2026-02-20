@@ -126,7 +126,6 @@ exports[`is a valid ESLint config 1`] = `
         "properties": "always",
       },
     ],
-    "dot-notation": "error",
     "func-name-matching": [
       "error",
       "never",
