@@ -1,4 +1,5 @@
 .DS_Store
+.github/aw
 .husky/_
 coverage
 dist
