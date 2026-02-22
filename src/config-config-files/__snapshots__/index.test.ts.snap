@@ -43,6 +43,10 @@ exports[`is a valid ESLint config 1`] = `
             "elementNamePattern": "^rules$",
             "groupName": "rules",
           },
+          {
+            "elementNamePattern": "^(test|tests)$",
+            "groupName": "test",
+          },
         ],
         "groups": [
           "name",
@@ -51,6 +55,7 @@ exports[`is a valid ESLint config 1`] = `
           "ignores",
           "plugins",
           "parser",
+          "test",
           "unknown",
           "rules",
           "overrides",

@@ -43,6 +43,10 @@ const config: LinterConfigEntry = {
 						groupName: 'rules',
 						elementNamePattern: '^rules$',
 					},
+					{
+						groupName: 'test',
+						elementNamePattern: '^(test|tests)$',
+					},
 				],
 				groups: [
 					'name',
@@ -51,6 +55,7 @@ const config: LinterConfigEntry = {
 					'ignores',
 					'plugins',
 					'parser',
+					'test',
 					'unknown',
 					'rules',
 					'overrides',
