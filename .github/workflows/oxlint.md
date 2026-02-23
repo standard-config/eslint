@@ -17,8 +17,9 @@ safe-outputs:
     create-pull-request:
         base-branch: main
         draft: false
-        fallback-as-issue: true
         footer: false
+    noop:
+        report-as-issue: false
 ---
 
 ## Goal
@@ -31,7 +32,7 @@ Detect ESLint rules enabled in this repository that are now covered by the local
 - Never push to `main`.
 - Use only local data from this repository and installed packages.
 - Keep each pull request minimal and scoped to a single rule, processed from a clean branch state.
-- If pull request creation is blocked by policy, report it via the fallback issue output and fail the workflow run.
+- If pull request creation is blocked by policy, fail the workflow run.
 
 ## Detection
 
