@@ -1,6 +1,6 @@
 ---
 on:
-    schedule: daily
+    schedule: weekly
     workflow_dispatch:
 
 engine:

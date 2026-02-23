@@ -3,6 +3,7 @@
 		".editorconfig": true
 	},
 	"search.exclude": {
+		"**/*.lock.yml": true,
 		"**/*.snap": true,
 		"pnpm-lock.yaml": true
 	},

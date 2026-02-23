@@ -22,13 +22,13 @@
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
 #
-# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"3cc310b2b68c94ec57f381d5c95da751cc51a2e29c697e7ae9870930173257d7","compiler_version":"v0.49.4"}
+# gh-aw-metadata: {"schema_version":"v1","frontmatter_hash":"f6b04dc00ded501b467262263ce22885632fa59d37f1baae4a505d1ab1ce6293","compiler_version":"v0.49.4"}
 
 name: "Oxlint"
 "on":
   schedule:
-  - cron: "30 6 * * *"
-    # Friendly format: daily (scattered)
+  - cron: "30 6 * * 2"
+    # Friendly format: weekly (scattered)
   workflow_dispatch:
 
 permissions: {}

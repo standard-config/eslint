@@ -16,7 +16,6 @@ exports[`is a valid ESLint config 1`] = `
   "name": "Base Config",
   "plugins": {
     "@stylistic": [ESLint.Plugin],
-    "@typescript-eslint": [ESLint.Plugin],
     "perfectionist": [ESLint.Plugin],
   },
   "rules": {
@@ -111,9 +110,6 @@ exports[`is a valid ESLint config 1`] = `
         },
       },
     ],
-    "@typescript-eslint/no-unnecessary-qualifier": "error",
-    "@typescript-eslint/no-useless-default-assignment": "error",
-    "@typescript-eslint/prefer-readonly": "error",
     "camelcase": [
       "error",
       {
