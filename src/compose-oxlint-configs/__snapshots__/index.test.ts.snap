@@ -1,0 +1,1197 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Base > generates valid Oxlint config entries 1`] = `
+{
+  "configBase": {
+    "rules": {
+      "eslint/camelcase": [
+        "error",
+        {
+          "properties": "always",
+        },
+      ],
+      "eslint/func-name-matching": [
+        "error",
+        "never",
+        {
+          "considerPropertyDescriptor": true,
+        },
+      ],
+    },
+  },
+  "configConfigFiles": {},
+  "configReact": {},
+}
+`;
+
+exports[`React + Stylistic > generates valid Oxlint config entries 1`] = `
+{
+  "configBase": {
+    "jsPlugins": [
+      {
+        "name": "stylistic",
+        "specifier": "@stylistic/eslint-plugin",
+      },
+      {
+        "name": "perfectionist",
+        "specifier": "eslint-plugin-perfectionist",
+      },
+      {
+        "name": "react-js",
+        "specifier": "eslint-plugin-react",
+      },
+      {
+        "name": "react-hooks-js",
+        "specifier": "eslint-plugin-react-hooks",
+      },
+      {
+        "name": "react-naming-convention",
+        "specifier": "eslint-plugin-react-naming-convention",
+      },
+      {
+        "name": "react-x",
+        "specifier": "eslint-plugin-react-x",
+      },
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.config.{ts,cts,mts}",
+        ],
+        "rules": {
+          "perfectionist/sort-objects": [
+            "error",
+            {
+              "customGroups": [
+                {
+                  "elementNamePattern": "^extends$",
+                  "groupName": "extends",
+                },
+                {
+                  "elementNamePattern": "^files$",
+                  "groupName": "files",
+                },
+                {
+                  "elementNamePattern": "^(ignores|ignorePatterns)$",
+                  "groupName": "ignores",
+                },
+                {
+                  "elementNamePattern": "^(name|groupName)$",
+                  "groupName": "name",
+                },
+                {
+                  "elementNamePattern": "^overrides$",
+                  "groupName": "overrides",
+                },
+                {
+                  "elementNamePattern": "^parser$",
+                  "groupName": "parser",
+                },
+                {
+                  "elementNamePattern": "^plugins$",
+                  "groupName": "plugins",
+                },
+                {
+                  "elementNamePattern": "^rules$",
+                  "groupName": "rules",
+                },
+                {
+                  "elementNamePattern": "^(test|tests)$",
+                  "groupName": "test",
+                },
+              ],
+              "groups": [
+                "name",
+                "files",
+                "extends",
+                "ignores",
+                "plugins",
+                "parser",
+                "test",
+                "unknown",
+                "rules",
+                "overrides",
+              ],
+              "newlinesBetween": 0,
+              "type": "natural",
+            },
+          ],
+        },
+      },
+      {
+        "files": [
+          "**/*.tsx",
+        ],
+        "rules": {
+          "perfectionist/sort-jsx-props": [
+            "error",
+            {
+              "customGroups": [
+                {
+                  "elementNamePattern": "^as$",
+                  "groupName": "as",
+                },
+                {
+                  "elementNamePattern": "^on.+",
+                  "groupName": "callback",
+                },
+                {
+                  "elementNamePattern": "^children$",
+                  "groupName": "children",
+                },
+                {
+                  "elementNamePattern": "^key$",
+                  "groupName": "key",
+                },
+                {
+                  "elementNamePattern": "^ref$",
+                  "groupName": "ref",
+                },
+                {
+                  "elementNamePattern": "^dangerously.+",
+                  "groupName": "unsafe",
+                },
+              ],
+              "groups": [
+                "key",
+                "ref",
+                "as",
+                "unknown",
+                "shorthand-prop",
+                "callback",
+                "children",
+                "unsafe",
+              ],
+              "type": "unsorted",
+            },
+          ],
+          "react-hooks-js/component-hook-factories": "error",
+          "react-hooks-js/config": "error",
+          "react-hooks-js/error-boundaries": "error",
+          "react-hooks-js/gating": "error",
+          "react-hooks-js/globals": "error",
+          "react-hooks-js/immutability": "error",
+          "react-hooks-js/incompatible-library": "error",
+          "react-hooks-js/preserve-manual-memoization": "error",
+          "react-hooks-js/purity": "error",
+          "react-hooks-js/refs": "error",
+          "react-hooks-js/set-state-in-effect": "error",
+          "react-hooks-js/set-state-in-render": "error",
+          "react-hooks-js/static-components": "error",
+          "react-hooks-js/unsupported-syntax": "error",
+          "react-hooks-js/use-memo": "error",
+          "react-hooks-js/void-use-memo": "error",
+          "react-js/function-component-definition": [
+            "error",
+            {
+              "namedComponents": [
+                "arrow-function",
+                "function-declaration",
+              ],
+              "unnamedComponents": "arrow-function",
+            },
+          ],
+          "react-js/no-adjacent-inline-elements": "error",
+          "react-naming-convention/component-name": "error",
+          "react-naming-convention/context-name": "error",
+          "react-naming-convention/ref-name": "error",
+          "react-naming-convention/use-state": "error",
+          "react-x/jsx-dollar": "error",
+          "react-x/jsx-key-before-spread": "error",
+          "react-x/jsx-no-iife": "error",
+          "react-x/no-access-state-in-setstate": "error",
+          "react-x/no-class-component": "error",
+          "react-x/no-context-provider": "error",
+          "react-x/no-default-props": "error",
+          "react-x/no-duplicate-key": "error",
+          "react-x/no-forward-ref": "error",
+          "react-x/no-misused-capture-owner-stack": "error",
+          "react-x/no-nested-component-definitions": "error",
+          "react-x/no-nested-lazy-component-declarations": "error",
+          "react-x/no-prop-types": "error",
+          "react-x/no-unnecessary-use-callback": "error",
+          "react-x/no-unnecessary-use-memo": "error",
+          "react-x/no-unstable-context-value": "error",
+          "react-x/no-unstable-default-props": "error",
+          "react-x/no-use-context": "error",
+          "react-x/prefer-destructuring-assignment": "error",
+          "react-x/prefer-use-state-lazy-initialization": "error",
+        },
+      },
+    ],
+    "rules": {
+      "eslint/camelcase": [
+        "error",
+        {
+          "properties": "always",
+        },
+      ],
+      "eslint/func-name-matching": [
+        "error",
+        "never",
+        {
+          "considerPropertyDescriptor": true,
+        },
+      ],
+      "perfectionist/sort-array-includes": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-exports": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-imports": [
+        "error",
+        {
+          "customGroups": [
+            {
+              "elementNamePattern": "^.*/_*(mocks)_*/.*$",
+              "groupName": "mock-side-effect",
+              "selector": "side-effect",
+            },
+            {
+              "elementNamePattern": "^.*/_*(mocks)_*/.*$",
+              "groupName": "mock",
+              "selector": "import",
+            },
+          ],
+          "groups": [
+            "mock-side-effect",
+            "mock",
+            [
+              "type-builtin",
+              "type-external",
+            ],
+            "type-internal",
+            [
+              "type-parent",
+              "type-sibling",
+              "type-index",
+            ],
+            [
+              "value-builtin",
+              "value-external",
+            ],
+            "value-internal",
+            [
+              "value-parent",
+              "value-sibling",
+              "value-index",
+            ],
+            "unknown",
+            "style",
+            "side-effect",
+            "side-effect-style",
+          ],
+          "internalPattern": [
+            "^(#|@/).*",
+          ],
+          "newlinesBetween": 0,
+          "sortSideEffects": true,
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-interfaces": [
+        "error",
+        {
+          "groups": [
+            "index-signature",
+            "unknown",
+            "method",
+          ],
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-intersection-types": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-named-exports": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-named-imports": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-object-types": [
+        "error",
+        {
+          "groups": [
+            "index-signature",
+            "unknown",
+            "method",
+          ],
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-objects": [
+        "error",
+        {
+          "type": "natural",
+          "useConfigurationIf": {
+            "objectType": "destructured",
+          },
+        },
+        {
+          "type": "unsorted",
+          "useConfigurationIf": {
+            "objectType": "non-destructured",
+          },
+        },
+      ],
+      "perfectionist/sort-union-types": [
+        "error",
+        {
+          "customGroups": [
+            {
+              "elementNamePattern": "^false$",
+              "groupName": "false",
+            },
+            {
+              "elementNamePattern": "^never$",
+              "groupName": "never",
+            },
+            {
+              "elementNamePattern": "^react.+",
+              "groupName": "react",
+            },
+          ],
+          "groups": [
+            "react",
+            "unknown",
+            "tuple",
+            "false",
+            "nullish",
+            "never",
+          ],
+          "type": "natural",
+        },
+      ],
+      "stylistic/lines-between-class-members": [
+        "error",
+        "always",
+        {
+          "exceptAfterSingleLine": true,
+        },
+      ],
+      "stylistic/padding-line-between-statements": [
+        "error",
+        {
+          "blankLine": "always",
+          "next": "*",
+          "prev": [
+            "block-like",
+            "directive",
+            "export",
+            "function",
+            "import",
+            "interface",
+            "type",
+          ],
+        },
+        {
+          "blankLine": "always",
+          "next": [
+            "block-like",
+            "directive",
+            "export",
+            "function",
+            "import",
+            "interface",
+            "type",
+          ],
+          "prev": "*",
+        },
+        {
+          "blankLine": "always",
+          "next": "*",
+          "prev": [
+            "case",
+            "default",
+          ],
+        },
+        {
+          "blankLine": "never",
+          "next": "directive",
+          "prev": "directive",
+        },
+        {
+          "blankLine": "any",
+          "next": "export",
+          "prev": "export",
+        },
+        {
+          "blankLine": "never",
+          "next": [
+            "function",
+            "function-overload",
+          ],
+          "prev": "function-overload",
+        },
+        {
+          "blankLine": "never",
+          "next": "import",
+          "prev": "import",
+        },
+        {
+          "blankLine": "any",
+          "next": "interface",
+          "prev": "interface",
+        },
+        {
+          "blankLine": "any",
+          "next": "type",
+          "prev": "type",
+        },
+      ],
+      "stylistic/spaced-comment": [
+        "error",
+        "always",
+        {
+          "block": {
+            "balanced": true,
+          },
+          "line": {
+            "markers": [
+              "/",
+            ],
+          },
+        },
+      ],
+    },
+    "settings": {
+      "react": {
+        "version": "19.2.4",
+      },
+    },
+  },
+  "configConfigFiles": {
+    "rules": {
+      "perfectionist/sort-objects": [
+        "error",
+        {
+          "customGroups": [
+            {
+              "elementNamePattern": "^extends$",
+              "groupName": "extends",
+            },
+            {
+              "elementNamePattern": "^files$",
+              "groupName": "files",
+            },
+            {
+              "elementNamePattern": "^(ignores|ignorePatterns)$",
+              "groupName": "ignores",
+            },
+            {
+              "elementNamePattern": "^(name|groupName)$",
+              "groupName": "name",
+            },
+            {
+              "elementNamePattern": "^overrides$",
+              "groupName": "overrides",
+            },
+            {
+              "elementNamePattern": "^parser$",
+              "groupName": "parser",
+            },
+            {
+              "elementNamePattern": "^plugins$",
+              "groupName": "plugins",
+            },
+            {
+              "elementNamePattern": "^rules$",
+              "groupName": "rules",
+            },
+            {
+              "elementNamePattern": "^(test|tests)$",
+              "groupName": "test",
+            },
+          ],
+          "groups": [
+            "name",
+            "files",
+            "extends",
+            "ignores",
+            "plugins",
+            "parser",
+            "test",
+            "unknown",
+            "rules",
+            "overrides",
+          ],
+          "newlinesBetween": 0,
+          "type": "natural",
+        },
+      ],
+    },
+  },
+  "configReact": {
+    "rules": {
+      "perfectionist/sort-jsx-props": [
+        "error",
+        {
+          "customGroups": [
+            {
+              "elementNamePattern": "^as$",
+              "groupName": "as",
+            },
+            {
+              "elementNamePattern": "^on.+",
+              "groupName": "callback",
+            },
+            {
+              "elementNamePattern": "^children$",
+              "groupName": "children",
+            },
+            {
+              "elementNamePattern": "^key$",
+              "groupName": "key",
+            },
+            {
+              "elementNamePattern": "^ref$",
+              "groupName": "ref",
+            },
+            {
+              "elementNamePattern": "^dangerously.+",
+              "groupName": "unsafe",
+            },
+          ],
+          "groups": [
+            "key",
+            "ref",
+            "as",
+            "unknown",
+            "shorthand-prop",
+            "callback",
+            "children",
+            "unsafe",
+          ],
+          "type": "unsorted",
+        },
+      ],
+      "react-hooks-js/component-hook-factories": "error",
+      "react-hooks-js/config": "error",
+      "react-hooks-js/error-boundaries": "error",
+      "react-hooks-js/gating": "error",
+      "react-hooks-js/globals": "error",
+      "react-hooks-js/immutability": "error",
+      "react-hooks-js/incompatible-library": "error",
+      "react-hooks-js/preserve-manual-memoization": "error",
+      "react-hooks-js/purity": "error",
+      "react-hooks-js/refs": "error",
+      "react-hooks-js/set-state-in-effect": "error",
+      "react-hooks-js/set-state-in-render": "error",
+      "react-hooks-js/static-components": "error",
+      "react-hooks-js/unsupported-syntax": "error",
+      "react-hooks-js/use-memo": "error",
+      "react-hooks-js/void-use-memo": "error",
+      "react-js/function-component-definition": [
+        "error",
+        {
+          "namedComponents": [
+            "arrow-function",
+            "function-declaration",
+          ],
+          "unnamedComponents": "arrow-function",
+        },
+      ],
+      "react-js/no-adjacent-inline-elements": "error",
+      "react-naming-convention/component-name": "error",
+      "react-naming-convention/context-name": "error",
+      "react-naming-convention/ref-name": "error",
+      "react-naming-convention/use-state": "error",
+      "react-x/jsx-dollar": "error",
+      "react-x/jsx-key-before-spread": "error",
+      "react-x/jsx-no-iife": "error",
+      "react-x/no-access-state-in-setstate": "error",
+      "react-x/no-class-component": "error",
+      "react-x/no-context-provider": "error",
+      "react-x/no-default-props": "error",
+      "react-x/no-duplicate-key": "error",
+      "react-x/no-forward-ref": "error",
+      "react-x/no-misused-capture-owner-stack": "error",
+      "react-x/no-nested-component-definitions": "error",
+      "react-x/no-nested-lazy-component-declarations": "error",
+      "react-x/no-prop-types": "error",
+      "react-x/no-unnecessary-use-callback": "error",
+      "react-x/no-unnecessary-use-memo": "error",
+      "react-x/no-unstable-context-value": "error",
+      "react-x/no-unstable-default-props": "error",
+      "react-x/no-use-context": "error",
+      "react-x/prefer-destructuring-assignment": "error",
+      "react-x/prefer-use-state-lazy-initialization": "error",
+    },
+  },
+}
+`;
+
+exports[`React > generates valid Oxlint config entries 1`] = `
+{
+  "configBase": {
+    "jsPlugins": [
+      {
+        "name": "react-js",
+        "specifier": "eslint-plugin-react",
+      },
+      {
+        "name": "react-hooks-js",
+        "specifier": "eslint-plugin-react-hooks",
+      },
+      {
+        "name": "react-naming-convention",
+        "specifier": "eslint-plugin-react-naming-convention",
+      },
+      {
+        "name": "react-x",
+        "specifier": "eslint-plugin-react-x",
+      },
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.tsx",
+        ],
+        "rules": {
+          "react-hooks-js/component-hook-factories": "error",
+          "react-hooks-js/config": "error",
+          "react-hooks-js/error-boundaries": "error",
+          "react-hooks-js/gating": "error",
+          "react-hooks-js/globals": "error",
+          "react-hooks-js/immutability": "error",
+          "react-hooks-js/incompatible-library": "error",
+          "react-hooks-js/preserve-manual-memoization": "error",
+          "react-hooks-js/purity": "error",
+          "react-hooks-js/refs": "error",
+          "react-hooks-js/set-state-in-effect": "error",
+          "react-hooks-js/set-state-in-render": "error",
+          "react-hooks-js/static-components": "error",
+          "react-hooks-js/unsupported-syntax": "error",
+          "react-hooks-js/use-memo": "error",
+          "react-hooks-js/void-use-memo": "error",
+          "react-js/function-component-definition": [
+            "error",
+            {
+              "namedComponents": [
+                "arrow-function",
+                "function-declaration",
+              ],
+              "unnamedComponents": "arrow-function",
+            },
+          ],
+          "react-js/no-adjacent-inline-elements": "error",
+          "react-naming-convention/component-name": "error",
+          "react-naming-convention/context-name": "error",
+          "react-naming-convention/ref-name": "error",
+          "react-naming-convention/use-state": "error",
+          "react-x/jsx-dollar": "error",
+          "react-x/jsx-key-before-spread": "error",
+          "react-x/jsx-no-iife": "error",
+          "react-x/no-access-state-in-setstate": "error",
+          "react-x/no-class-component": "error",
+          "react-x/no-context-provider": "error",
+          "react-x/no-default-props": "error",
+          "react-x/no-duplicate-key": "error",
+          "react-x/no-forward-ref": "error",
+          "react-x/no-misused-capture-owner-stack": "error",
+          "react-x/no-nested-component-definitions": "error",
+          "react-x/no-nested-lazy-component-declarations": "error",
+          "react-x/no-prop-types": "error",
+          "react-x/no-unnecessary-use-callback": "error",
+          "react-x/no-unnecessary-use-memo": "error",
+          "react-x/no-unstable-context-value": "error",
+          "react-x/no-unstable-default-props": "error",
+          "react-x/no-use-context": "error",
+          "react-x/prefer-destructuring-assignment": "error",
+          "react-x/prefer-use-state-lazy-initialization": "error",
+        },
+      },
+    ],
+    "rules": {
+      "eslint/camelcase": [
+        "error",
+        {
+          "properties": "always",
+        },
+      ],
+      "eslint/func-name-matching": [
+        "error",
+        "never",
+        {
+          "considerPropertyDescriptor": true,
+        },
+      ],
+    },
+    "settings": {
+      "react": {
+        "version": "19.2.4",
+      },
+    },
+  },
+  "configConfigFiles": {},
+  "configReact": {
+    "rules": {
+      "react-hooks-js/component-hook-factories": "error",
+      "react-hooks-js/config": "error",
+      "react-hooks-js/error-boundaries": "error",
+      "react-hooks-js/gating": "error",
+      "react-hooks-js/globals": "error",
+      "react-hooks-js/immutability": "error",
+      "react-hooks-js/incompatible-library": "error",
+      "react-hooks-js/preserve-manual-memoization": "error",
+      "react-hooks-js/purity": "error",
+      "react-hooks-js/refs": "error",
+      "react-hooks-js/set-state-in-effect": "error",
+      "react-hooks-js/set-state-in-render": "error",
+      "react-hooks-js/static-components": "error",
+      "react-hooks-js/unsupported-syntax": "error",
+      "react-hooks-js/use-memo": "error",
+      "react-hooks-js/void-use-memo": "error",
+      "react-js/function-component-definition": [
+        "error",
+        {
+          "namedComponents": [
+            "arrow-function",
+            "function-declaration",
+          ],
+          "unnamedComponents": "arrow-function",
+        },
+      ],
+      "react-js/no-adjacent-inline-elements": "error",
+      "react-naming-convention/component-name": "error",
+      "react-naming-convention/context-name": "error",
+      "react-naming-convention/ref-name": "error",
+      "react-naming-convention/use-state": "error",
+      "react-x/jsx-dollar": "error",
+      "react-x/jsx-key-before-spread": "error",
+      "react-x/jsx-no-iife": "error",
+      "react-x/no-access-state-in-setstate": "error",
+      "react-x/no-class-component": "error",
+      "react-x/no-context-provider": "error",
+      "react-x/no-default-props": "error",
+      "react-x/no-duplicate-key": "error",
+      "react-x/no-forward-ref": "error",
+      "react-x/no-misused-capture-owner-stack": "error",
+      "react-x/no-nested-component-definitions": "error",
+      "react-x/no-nested-lazy-component-declarations": "error",
+      "react-x/no-prop-types": "error",
+      "react-x/no-unnecessary-use-callback": "error",
+      "react-x/no-unnecessary-use-memo": "error",
+      "react-x/no-unstable-context-value": "error",
+      "react-x/no-unstable-default-props": "error",
+      "react-x/no-use-context": "error",
+      "react-x/prefer-destructuring-assignment": "error",
+      "react-x/prefer-use-state-lazy-initialization": "error",
+    },
+  },
+}
+`;
+
+exports[`Stylistic > generates valid Oxlint config entries 1`] = `
+{
+  "configBase": {
+    "jsPlugins": [
+      {
+        "name": "stylistic",
+        "specifier": "@stylistic/eslint-plugin",
+      },
+      {
+        "name": "perfectionist",
+        "specifier": "eslint-plugin-perfectionist",
+      },
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.config.{ts,cts,mts}",
+        ],
+        "rules": {
+          "perfectionist/sort-objects": [
+            "error",
+            {
+              "customGroups": [
+                {
+                  "elementNamePattern": "^extends$",
+                  "groupName": "extends",
+                },
+                {
+                  "elementNamePattern": "^files$",
+                  "groupName": "files",
+                },
+                {
+                  "elementNamePattern": "^(ignores|ignorePatterns)$",
+                  "groupName": "ignores",
+                },
+                {
+                  "elementNamePattern": "^(name|groupName)$",
+                  "groupName": "name",
+                },
+                {
+                  "elementNamePattern": "^overrides$",
+                  "groupName": "overrides",
+                },
+                {
+                  "elementNamePattern": "^parser$",
+                  "groupName": "parser",
+                },
+                {
+                  "elementNamePattern": "^plugins$",
+                  "groupName": "plugins",
+                },
+                {
+                  "elementNamePattern": "^rules$",
+                  "groupName": "rules",
+                },
+                {
+                  "elementNamePattern": "^(test|tests)$",
+                  "groupName": "test",
+                },
+              ],
+              "groups": [
+                "name",
+                "files",
+                "extends",
+                "ignores",
+                "plugins",
+                "parser",
+                "test",
+                "unknown",
+                "rules",
+                "overrides",
+              ],
+              "newlinesBetween": 0,
+              "type": "natural",
+            },
+          ],
+        },
+      },
+    ],
+    "rules": {
+      "eslint/camelcase": [
+        "error",
+        {
+          "properties": "always",
+        },
+      ],
+      "eslint/func-name-matching": [
+        "error",
+        "never",
+        {
+          "considerPropertyDescriptor": true,
+        },
+      ],
+      "perfectionist/sort-array-includes": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-exports": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-imports": [
+        "error",
+        {
+          "customGroups": [
+            {
+              "elementNamePattern": "^.*/_*(mocks)_*/.*$",
+              "groupName": "mock-side-effect",
+              "selector": "side-effect",
+            },
+            {
+              "elementNamePattern": "^.*/_*(mocks)_*/.*$",
+              "groupName": "mock",
+              "selector": "import",
+            },
+          ],
+          "groups": [
+            "mock-side-effect",
+            "mock",
+            [
+              "type-builtin",
+              "type-external",
+            ],
+            "type-internal",
+            [
+              "type-parent",
+              "type-sibling",
+              "type-index",
+            ],
+            [
+              "value-builtin",
+              "value-external",
+            ],
+            "value-internal",
+            [
+              "value-parent",
+              "value-sibling",
+              "value-index",
+            ],
+            "unknown",
+            "style",
+            "side-effect",
+            "side-effect-style",
+          ],
+          "internalPattern": [
+            "^(#|@/).*",
+          ],
+          "newlinesBetween": 0,
+          "sortSideEffects": true,
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-interfaces": [
+        "error",
+        {
+          "groups": [
+            "index-signature",
+            "unknown",
+            "method",
+          ],
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-intersection-types": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-named-exports": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-named-imports": [
+        "error",
+        {
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-object-types": [
+        "error",
+        {
+          "groups": [
+            "index-signature",
+            "unknown",
+            "method",
+          ],
+          "type": "natural",
+        },
+      ],
+      "perfectionist/sort-objects": [
+        "error",
+        {
+          "type": "natural",
+          "useConfigurationIf": {
+            "objectType": "destructured",
+          },
+        },
+        {
+          "type": "unsorted",
+          "useConfigurationIf": {
+            "objectType": "non-destructured",
+          },
+        },
+      ],
+      "perfectionist/sort-union-types": [
+        "error",
+        {
+          "customGroups": [
+            {
+              "elementNamePattern": "^false$",
+              "groupName": "false",
+            },
+            {
+              "elementNamePattern": "^never$",
+              "groupName": "never",
+            },
+            {
+              "elementNamePattern": "^react.+",
+              "groupName": "react",
+            },
+          ],
+          "groups": [
+            "react",
+            "unknown",
+            "tuple",
+            "false",
+            "nullish",
+            "never",
+          ],
+          "type": "natural",
+        },
+      ],
+      "stylistic/lines-between-class-members": [
+        "error",
+        "always",
+        {
+          "exceptAfterSingleLine": true,
+        },
+      ],
+      "stylistic/padding-line-between-statements": [
+        "error",
+        {
+          "blankLine": "always",
+          "next": "*",
+          "prev": [
+            "block-like",
+            "directive",
+            "export",
+            "function",
+            "import",
+            "interface",
+            "type",
+          ],
+        },
+        {
+          "blankLine": "always",
+          "next": [
+            "block-like",
+            "directive",
+            "export",
+            "function",
+            "import",
+            "interface",
+            "type",
+          ],
+          "prev": "*",
+        },
+        {
+          "blankLine": "always",
+          "next": "*",
+          "prev": [
+            "case",
+            "default",
+          ],
+        },
+        {
+          "blankLine": "never",
+          "next": "directive",
+          "prev": "directive",
+        },
+        {
+          "blankLine": "any",
+          "next": "export",
+          "prev": "export",
+        },
+        {
+          "blankLine": "never",
+          "next": [
+            "function",
+            "function-overload",
+          ],
+          "prev": "function-overload",
+        },
+        {
+          "blankLine": "never",
+          "next": "import",
+          "prev": "import",
+        },
+        {
+          "blankLine": "any",
+          "next": "interface",
+          "prev": "interface",
+        },
+        {
+          "blankLine": "any",
+          "next": "type",
+          "prev": "type",
+        },
+      ],
+      "stylistic/spaced-comment": [
+        "error",
+        "always",
+        {
+          "block": {
+            "balanced": true,
+          },
+          "line": {
+            "markers": [
+              "/",
+            ],
+          },
+        },
+      ],
+    },
+  },
+  "configConfigFiles": {
+    "rules": {
+      "perfectionist/sort-objects": [
+        "error",
+        {
+          "customGroups": [
+            {
+              "elementNamePattern": "^extends$",
+              "groupName": "extends",
+            },
+            {
+              "elementNamePattern": "^files$",
+              "groupName": "files",
+            },
+            {
+              "elementNamePattern": "^(ignores|ignorePatterns)$",
+              "groupName": "ignores",
+            },
+            {
+              "elementNamePattern": "^(name|groupName)$",
+              "groupName": "name",
+            },
+            {
+              "elementNamePattern": "^overrides$",
+              "groupName": "overrides",
+            },
+            {
+              "elementNamePattern": "^parser$",
+              "groupName": "parser",
+            },
+            {
+              "elementNamePattern": "^plugins$",
+              "groupName": "plugins",
+            },
+            {
+              "elementNamePattern": "^rules$",
+              "groupName": "rules",
+            },
+            {
+              "elementNamePattern": "^(test|tests)$",
+              "groupName": "test",
+            },
+          ],
+          "groups": [
+            "name",
+            "files",
+            "extends",
+            "ignores",
+            "plugins",
+            "parser",
+            "test",
+            "unknown",
+            "rules",
+            "overrides",
+          ],
+          "newlinesBetween": 0,
+          "type": "natural",
+        },
+      ],
+    },
+  },
+  "configReact": {},
+}
+`;

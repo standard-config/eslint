@@ -36,7 +36,7 @@
 	"engines": {
 		"node": ">=20"
 	},
-	"packageManager": "pnpm@10.30.0",
+	"packageManager": "pnpm@10.30.2",
 	"dependencies": {
 		"@eslint/compat": "^2.0.2",
 		"@stylistic/eslint-plugin": "^5.9.0",
@@ -48,7 +48,7 @@
 		"typescript-eslint": "^8.56.1"
 	},
 	"peerDependencies": {
-		"@standard-config/oxlint": "*",
+		"@standard-config/oxlint": ">=1.2.2",
 		"eslint": ">=9",
 		"typescript": ">=5"
 	},
@@ -58,7 +58,7 @@
 		}
 	},
 	"devDependencies": {
-		"@standard-config/oxlint": "^1.2.1",
+		"@standard-config/oxlint": "^1.2.2",
 		"@standard-config/prettier": "^1.9.1",
 		"@standard-config/tsconfig": "^2.0.2",
 		"@types/node": "^22.19.11",

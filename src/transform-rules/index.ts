@@ -1,5 +1,5 @@
 import type { Linter } from 'eslint';
-import type { LinterConfigRules } from '../types/index.js';
+import type { LinterConfigRules } from '../types/index.d.ts';
 
 /**
  * Modify a set of ESLint rules.
@@ -7,13 +7,19 @@ import type { LinterConfigRules } from '../types/index.js';
  * @deprecated Not covered by semver.
  */
 export default function transformRules(
-	rules: LinterConfigRules,
+	rules: Linter.Config['rules'],
 	options: {
 		omit?: ReadonlyArray<string>;
+		prefix?: string;
 		severity?: Linter.StringSeverity;
 	}
 ): LinterConfigRules {
-	const omittedRules = new Set(options.omit);
+	if (!rules) {
+		return {};
+	}
+
+	const { omit, prefix, severity } = options;
+	const omittedRules = new Set(omit);
 
 	const transformedRules: LinterConfigRules = {};
 
@@ -23,17 +29,28 @@ export default function transformRules(
 		}
 
 		if (!Array.isArray(ruleConfig)) {
-			transformedRules[ruleName] = options.severity ?? ruleConfig;
+			transformedRules[ruleName] = severity ?? ruleConfig ?? 'off';
 			continue;
 		}
 
 		const [ruleSeverity, ...ruleOptions] = ruleConfig;
 
-		transformedRules[ruleName] = [
-			options.severity ?? ruleSeverity,
-			...ruleOptions,
-		];
+		transformedRules[ruleName] = [severity ?? ruleSeverity, ...ruleOptions];
 	}
 
-	return transformedRules;
+	return typeof prefix === 'string'
+		? prefixRules(transformedRules, prefix)
+		: transformedRules;
+}
+
+function prefixRules(rules: LinterConfigRules, prefix: string) {
+	const prefixedRules: LinterConfigRules = {};
+
+	for (const [ruleName, ruleConfig] of Object.entries(rules)) {
+		const name = ruleName.replace(/^.*?\//, '');
+
+		prefixedRules[`${prefix}/${name}`] = ruleConfig;
+	}
+
+	return prefixedRules;
 }

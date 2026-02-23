@@ -1,69 +1,21 @@
 import type { LinterConfigEntry } from '../types/index.d.ts';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
+import rulesPerfectionist from './rules-perfectionist.ts';
 
+/**
+ * Optional config entry containing rules that target config files. Intended for
+ * explicit overrides.
+ *
+ * This config is intentionally limited to rules not supported by Oxlint
+ * and stylistic rules outside of Prettier’s scope.
+ */
 const config: LinterConfigEntry = {
 	name: 'Config Files',
 	plugins: {
 		perfectionist: pluginPerfectionist,
 	},
 	rules: {
-		'perfectionist/sort-objects': [
-			'error',
-			{
-				customGroups: [
-					{
-						groupName: 'extends',
-						elementNamePattern: '^extends$',
-					},
-					{
-						groupName: 'files',
-						elementNamePattern: '^files$',
-					},
-					{
-						groupName: 'ignores',
-						elementNamePattern: '^(ignores|ignorePatterns)$',
-					},
-					{
-						groupName: 'name',
-						elementNamePattern: '^(name|groupName)$',
-					},
-					{
-						groupName: 'overrides',
-						elementNamePattern: '^overrides$',
-					},
-					{
-						groupName: 'parser',
-						elementNamePattern: '^parser$',
-					},
-					{
-						groupName: 'plugins',
-						elementNamePattern: '^plugins$',
-					},
-					{
-						groupName: 'rules',
-						elementNamePattern: '^rules$',
-					},
-					{
-						groupName: 'test',
-						elementNamePattern: '^(test|tests)$',
-					},
-				],
-				groups: [
-					'name',
-					'files',
-					'extends',
-					'ignores',
-					'plugins',
-					'parser',
-					'test',
-					'unknown',
-					'rules',
-					'overrides',
-				],
-				newlinesBetween: 0,
-				type: 'natural',
-			},
-		],
+		...rulesPerfectionist,
 	},
 };
 

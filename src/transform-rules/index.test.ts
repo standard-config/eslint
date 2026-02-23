@@ -1,7 +1,9 @@
 import { expect, test } from 'vitest';
 import transformRules from './index.ts';
 
-test('returns unchanged rules by default', () => {
+test('normalizes rules by default', () => {
+	expect(transformRules(undefined, {})).toStrictEqual({});
+
 	const result = transformRules(
 		{
 			'camelcase': ['warn', { properties: 'always' }],
@@ -14,7 +16,7 @@ test('returns unchanged rules by default', () => {
 	expect(result).toStrictEqual({
 		'camelcase': ['warn', { properties: 'always' }],
 		'func-name-matching': 'off',
-		'no-console': undefined,
+		'no-console': 'off',
 	});
 });
 
@@ -53,5 +55,24 @@ test('omits selected rules', () => {
 	expect(result).toStrictEqual({
 		'func-name-matching': 'error',
 		'no-console': 'error',
+	});
+});
+
+test('prefixes rule names', () => {
+	const result = transformRules(
+		{
+			'camelcase': ['warn', { properties: 'always' }],
+			'prefix/func-name-matching': 'off',
+			'prefix/no/console': undefined,
+		},
+		{
+			prefix: 'eslint',
+		}
+	);
+
+	expect(result).toStrictEqual({
+		'eslint/camelcase': ['warn', { properties: 'always' }],
+		'eslint/func-name-matching': 'off',
+		'eslint/no/console': 'off',
 	});
 });
