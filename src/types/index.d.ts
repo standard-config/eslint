@@ -3,6 +3,8 @@ import type { defineConfig as eslintDefineConfig } from 'eslint/config';
 
 export type LinterConfigEntry = Omit<Linter.Config, 'files'>;
 
+export type LinterConfigRules = NonNullable<LinterConfigEntry['rules']>;
+
 type InfiniteLinterConfig = Parameters<typeof eslintDefineConfig>[number];
 
 export type StandardConfig = Exclude<

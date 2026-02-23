@@ -28,7 +28,10 @@
 	],
 	"type": "module",
 	"sideEffects": false,
-	"exports": "./dist/index.mjs",
+	"exports": {
+		".": "./dist/index.mjs",
+		"./utilities": "./dist/utilities.mjs"
+	},
 	"types": "./dist/index.d.mts",
 	"engines": {
 		"node": ">=20"
@@ -42,7 +45,7 @@
 		"eslint-plugin-react-hooks": "^7.0.1",
 		"eslint-plugin-react-naming-convention": "^2.13.0",
 		"eslint-plugin-react-x": "^2.13.0",
-		"typescript-eslint": "^8.56.0"
+		"typescript-eslint": "^8.56.1"
 	},
 	"peerDependencies": {
 		"@standard-config/oxlint": "*",
@@ -55,7 +58,7 @@
 		}
 	},
 	"devDependencies": {
-		"@standard-config/oxlint": "^1.2.0",
+		"@standard-config/oxlint": "^1.2.1",
 		"@standard-config/prettier": "^1.9.1",
 		"@standard-config/tsconfig": "^2.0.2",
 		"@types/node": "^22.19.11",

@@ -4,7 +4,11 @@ export default defineConfig({
 	dts: {
 		sourcemap: true,
 	},
-	entry: './src/index.ts',
+	entry: [
+		/* prettier-ignore */
+		'./src/index.ts',
+		'./src/utilities.ts',
+	],
 	publint: true,
 	sourcemap: true,
 });

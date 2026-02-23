@@ -5,6 +5,7 @@ import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginReactNamingConvention from 'eslint-plugin-react-naming-convention';
 import pluginReactX from 'eslint-plugin-react-x';
+import rulesReactHooks from './rules-react-hooks.ts';
 
 /**
  * This config is intentionally limited to rules not supported by Oxlint
@@ -25,6 +26,8 @@ const config: LinterConfigEntry = {
 		},
 	},
 	rules: {
+		...rulesReactHooks,
+
 		'perfectionist/sort-jsx-props': [
 			'error',
 			{
@@ -101,21 +104,6 @@ const config: LinterConfigEntry = {
 			},
 		],
 		'react/no-adjacent-inline-elements': 'error',
-
-		// Enforce all `react-hooks` rules as errors
-		...Object.fromEntries(
-			Object.keys(
-				pluginReactHooks.configs.flat['recommended-latest'].rules
-			)
-				.filter(
-					(rule) =>
-						![
-							'react-hooks/exhaustive-deps',
-							'react-hooks/rules-of-hooks',
-						].includes(rule)
-				)
-				.map((rule) => [rule, 'error'])
-		),
 	},
 };
 
