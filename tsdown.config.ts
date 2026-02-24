@@ -9,6 +9,9 @@ export default defineConfig({
 		'./src/index.ts',
 		'./src/utilities.ts',
 	],
+	external: ['oxlint'],
+	failOnWarn: true,
+	inlineOnly: [],
 	publint: true,
 	sourcemap: true,
 });
