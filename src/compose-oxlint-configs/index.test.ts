@@ -19,12 +19,13 @@ describe('Base', () => {
 	test('generates valid Oxlint config entries', () => {
 		const result = composeOxlintConfigs();
 
-		expect(result).toHaveProperty('configBase', expect.any(Object));
-		expect(result).toHaveProperty('configConfigFiles', {});
-		expect(result).toHaveProperty('configReact', {});
+		expect(result).toStrictEqual({
+			configBase: expect.any(Object),
+			configConfigFiles: {},
+			configReact: {},
+		});
 
 		expect(defineConfig(result.configBase)).toBeDefined();
-
 		expect(result).toMatchSnapshot();
 	});
 });
@@ -33,13 +34,14 @@ describe('React', () => {
 	test('generates valid Oxlint config entries', () => {
 		const result = composeOxlintConfigs({ react: true });
 
-		expect(result).toHaveProperty('configBase', expect.any(Object));
-		expect(result).toHaveProperty('configConfigFiles', {});
-		expect(result).toHaveProperty('configReact', expect.any(Object));
+		expect(result).toStrictEqual({
+			configBase: expect.any(Object),
+			configConfigFiles: {},
+			configReact: expect.any(Object),
+		});
 
 		expect(defineConfig(result.configBase)).toBeDefined();
 		expect(defineConfig(result.configReact)).toBeDefined();
-
 		expect(result).toMatchSnapshot();
 	});
 });
@@ -48,13 +50,14 @@ describe('Stylistic', () => {
 	test('generates valid Oxlint config entries', () => {
 		const result = composeOxlintConfigs({ stylistic: true });
 
-		expect(result).toHaveProperty('configBase', expect.any(Object));
-		expect(result).toHaveProperty('configConfigFiles', expect.any(Object));
-		expect(result).toHaveProperty('configReact', {});
+		expect(result).toStrictEqual({
+			configBase: expect.any(Object),
+			configConfigFiles: expect.any(Object),
+			configReact: {},
+		});
 
 		expect(defineConfig(result.configBase)).toBeDefined();
 		expect(defineConfig(result.configConfigFiles)).toBeDefined();
-
 		expect(result).toMatchSnapshot();
 	});
 });
@@ -63,14 +66,15 @@ describe('React + Stylistic', () => {
 	test('generates valid Oxlint config entries', () => {
 		const result = composeOxlintConfigs({ react: true, stylistic: true });
 
-		expect(result).toHaveProperty('configBase', expect.any(Object));
-		expect(result).toHaveProperty('configConfigFiles', expect.any(Object));
-		expect(result).toHaveProperty('configReact', expect.any(Object));
+		expect(result).toStrictEqual({
+			configBase: expect.any(Object),
+			configConfigFiles: expect.any(Object),
+			configReact: expect.any(Object),
+		});
 
 		expect(defineConfig(result.configBase)).toBeDefined();
 		expect(defineConfig(result.configConfigFiles)).toBeDefined();
 		expect(defineConfig(result.configReact)).toBeDefined();
-
 		expect(result).toMatchSnapshot();
 	});
 });

@@ -29,10 +29,15 @@
 	"type": "module",
 	"sideEffects": false,
 	"exports": {
-		".": "./dist/index.mjs",
-		"./utilities": "./dist/utilities.mjs"
+		".": {
+			"types": "./dist/index.d.mts",
+			"import": "./dist/index.mjs"
+		},
+		"./utilities": {
+			"types": "./dist/utilities.d.mts",
+			"import": "./dist/utilities.mjs"
+		}
 	},
-	"types": "./dist/index.d.mts",
 	"engines": {
 		"node": ">=20"
 	},

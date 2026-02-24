@@ -6,12 +6,11 @@ export default defineConfig({
 	},
 	entry: [
 		/* prettier-ignore */
-		'./src/index.ts',
-		'./src/utilities.ts',
+		'src/index.ts',
+		'src/utilities.ts',
 	],
-	external: ['oxlint'],
 	failOnWarn: true,
-	inlineOnly: [],
 	publint: true,
+	skipNodeModulesBundle: true,
 	sourcemap: true,
 });

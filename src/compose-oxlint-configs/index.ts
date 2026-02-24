@@ -2,8 +2,8 @@ import type { OxlintConfig } from 'oxlint';
 import type {
 	OxlintConfigEntries,
 	OxlintConfigEntriesOptions,
-	OxlintConfigOverrideEntry,
-} from '../types/index.d.ts';
+	OxlintOverrideEntry,
+} from './types.d.ts';
 import configBaseRulesCore from '../config-base/rules-core.ts';
 import configBaseRulesPerfectionist from '../config-base/rules-perfectionist.ts';
 import configBaseRulesStylistic from '../config-base/rules-stylistic.ts';
@@ -34,8 +34,8 @@ export default function composeOxlintConfigs({
 		}),
 	};
 
-	const configConfigFiles: OxlintConfigOverrideEntry = {};
-	const configReact: OxlintConfigOverrideEntry = {};
+	const configConfigFiles: OxlintOverrideEntry = {};
+	const configReact: OxlintOverrideEntry = {};
 
 	if (stylistic) {
 		configBase.jsPlugins = [
