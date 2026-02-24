@@ -33,6 +33,7 @@ Detect ESLint rules enabled in this repository that are now covered by the local
 - Use only local data from this repository and installed packages.
 - Keep each pull request minimal and scoped to a single rule, processed from a clean branch state.
 - If pull request creation is blocked by policy, fail the workflow run.
+- Every run must emit at least one safe output. If none are produced, emit a `noop` safe output with a brief reason.
 
 ## Detection
 
@@ -45,8 +46,8 @@ Detect ESLint rules enabled in this repository that are now covered by the local
     - Exclude rules in the `nursery` category.
 
 4. A candidate rule is an ESLint rule enabled in this repo that now exists in Oxlint.
-    - If no candidates are found, exit successfully without creating branches, commits, or pull requests.
     - Evaluate all candidates.
+    - If none are found, emit a `noop` safe output stating that no matches were detected, then exit without creating branches, commits, or pull requests.
     - If safe output limits prevent creating all pull requests in one run, defer the remaining rules to subsequent scheduled or manual runs.
 
 ## Pull Request Workflow
