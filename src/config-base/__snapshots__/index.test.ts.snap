@@ -55,6 +55,16 @@ exports[`is a valid ESLint config 1`] = `
         "prev": "*",
       },
       {
+        "blankLine": "any",
+        "next": [
+          "break",
+          "continue",
+          "return",
+          "throw",
+        ],
+        "prev": "block-like",
+      },
+      {
         "blankLine": "always",
         "next": "*",
         "prev": [

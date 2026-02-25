@@ -275,6 +275,16 @@ exports[`Base > generates valid Oxlint config entries 1`] = `
           "prev": "*",
         },
         {
+          "blankLine": "any",
+          "next": [
+            "break",
+            "continue",
+            "return",
+            "throw",
+          ],
+          "prev": "block-like",
+        },
+        {
           "blankLine": "always",
           "next": "*",
           "prev": [
@@ -810,6 +820,16 @@ exports[`React > generates valid Oxlint config entries 1`] = `
             "type",
           ],
           "prev": "*",
+        },
+        {
+          "blankLine": "any",
+          "next": [
+            "break",
+            "continue",
+            "return",
+            "throw",
+          ],
+          "prev": "block-like",
         },
         {
           "blankLine": "always",

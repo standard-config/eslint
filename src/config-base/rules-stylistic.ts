@@ -35,6 +35,11 @@ const rules: LinterConfigRules = {
 			prev: '*',
 		},
 		{
+			blankLine: 'any',
+			next: ['break', 'continue', 'return', 'throw'],
+			prev: 'block-like',
+		},
+		{
 			blankLine: 'always',
 			next: '*',
 			prev: ['case', 'default'],
