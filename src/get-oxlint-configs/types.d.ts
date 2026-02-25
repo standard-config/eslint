@@ -6,7 +6,7 @@ export type OxlintOverrideEntry = Pick<OxlintOverride, 'rules'>;
 export type OxlintConfigEntriesOptions = Pick<StandardConfig, 'react'> & {
 	/**
 	 * Enable stylistic rules.
-	 * @default false
+	 * @default true
 	 */
 	stylistic?: boolean;
 };

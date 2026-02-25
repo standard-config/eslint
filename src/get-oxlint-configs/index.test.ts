@@ -1,6 +1,6 @@
 import { defineConfig } from 'oxlint';
 import { describe, expect, test, vi } from 'vitest';
-import composeOxlintConfigs from './index.ts';
+import getOxlintConfigs from './index.ts';
 
 // Don’t expand dependency paths in snapshots
 vi.mock(import('../transform-plugin/index.ts'), async (importActual) => {
@@ -17,7 +17,21 @@ vi.mock(import('../transform-plugin/index.ts'), async (importActual) => {
 
 describe('Base', () => {
 	test('generates valid Oxlint config entries', () => {
-		const result = composeOxlintConfigs();
+		const result = getOxlintConfigs();
+
+		expect(result).toStrictEqual({
+			configBase: expect.any(Object),
+			configConfigFiles: expect.any(Object),
+			configReact: {},
+		});
+
+		expect(defineConfig(result.configBase)).toBeDefined();
+		expect(defineConfig(result.configConfigFiles)).toBeDefined();
+		expect(result).toMatchSnapshot();
+	});
+
+	test('skips stylistic rules', () => {
+		const result = getOxlintConfigs({ stylistic: false });
 
 		expect(result).toStrictEqual({
 			configBase: expect.any(Object),
@@ -32,7 +46,22 @@ describe('Base', () => {
 
 describe('React', () => {
 	test('generates valid Oxlint config entries', () => {
-		const result = composeOxlintConfigs({ react: true });
+		const result = getOxlintConfigs({ react: true });
+
+		expect(result).toStrictEqual({
+			configBase: expect.any(Object),
+			configConfigFiles: expect.any(Object),
+			configReact: expect.any(Object),
+		});
+
+		expect(defineConfig(result.configBase)).toBeDefined();
+		expect(defineConfig(result.configConfigFiles)).toBeDefined();
+		expect(defineConfig(result.configReact)).toBeDefined();
+		expect(result).toMatchSnapshot();
+	});
+
+	test('skips stylistic rules', () => {
+		const result = getOxlintConfigs({ react: true, stylistic: false });
 
 		expect(result).toStrictEqual({
 			configBase: expect.any(Object),
@@ -41,39 +70,6 @@ describe('React', () => {
 		});
 
 		expect(defineConfig(result.configBase)).toBeDefined();
-		expect(defineConfig(result.configReact)).toBeDefined();
-		expect(result).toMatchSnapshot();
-	});
-});
-
-describe('Stylistic', () => {
-	test('generates valid Oxlint config entries', () => {
-		const result = composeOxlintConfigs({ stylistic: true });
-
-		expect(result).toStrictEqual({
-			configBase: expect.any(Object),
-			configConfigFiles: expect.any(Object),
-			configReact: {},
-		});
-
-		expect(defineConfig(result.configBase)).toBeDefined();
-		expect(defineConfig(result.configConfigFiles)).toBeDefined();
-		expect(result).toMatchSnapshot();
-	});
-});
-
-describe('React + Stylistic', () => {
-	test('generates valid Oxlint config entries', () => {
-		const result = composeOxlintConfigs({ react: true, stylistic: true });
-
-		expect(result).toStrictEqual({
-			configBase: expect.any(Object),
-			configConfigFiles: expect.any(Object),
-			configReact: expect.any(Object),
-		});
-
-		expect(defineConfig(result.configBase)).toBeDefined();
-		expect(defineConfig(result.configConfigFiles)).toBeDefined();
 		expect(defineConfig(result.configReact)).toBeDefined();
 		expect(result).toMatchSnapshot();
 	});

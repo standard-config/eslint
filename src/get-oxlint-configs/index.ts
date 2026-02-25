@@ -24,9 +24,13 @@ const PREFIX_REACT_NAMING_CONVENTION = 'react-naming-convention';
 const PREFIX_REACT_X = 'react-x';
 const PREFIX_STYLISTIC = 'stylistic';
 
-export default function composeOxlintConfigs({
-	react,
-	stylistic,
+/**
+ * Translate Standard Config’s own ESLint config to Oxlint config entries.
+ * Relies on Oxlint’s experimental `jsPlugins` support.
+ */
+export default function getOxlintConfigs({
+	react = false,
+	stylistic = true,
 }: OxlintConfigEntriesOptions = {}): OxlintConfigEntries {
 	const configBase: OxlintConfig = {
 		rules: transformRules(configBaseRulesCore, {

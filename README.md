@@ -38,6 +38,42 @@ export default defineConfig({
 });
 ```
 
+### Skipping ESLint
+
+Standard Config comes with a set of utilities that can translate this config to Oxlint, eliminating the need to run ESLint. This relies on Oxlint’s experimental [JS Plugins](https://oxc.rs/docs/guide/usage/linter/js-plugins.html) support.
+
+In your `oxlint.config.ts`:
+
+```ts
+import { getOxlintConfigs } from '@standard-config/eslint/utilities';
+import { defineConfig } from '@standard-config/oxlint';
+
+const { configBase, configConfigFiles } = getOxlintConfigs({
+    // Optional, as above
+    react: true,
+});
+
+// Merge `configBase` at the root of your config, as it defines
+// all supported third-party rules from this config, including
+// the resolved `jsPlugins`
+export default defineConfig(configBase, {
+    react: true,
+    rules: {
+        // Example override
+        'react-js/function-component-definition': 'off',
+    },
+    overrides: [
+        {
+            // `configConfigFiles` is an optional override entry
+            // intended for config files other than `**/*.config.ts`
+            // (those are already covered by `configBase`)
+            files: ['config/**/*.ts'],
+            ...configConfigFiles,
+        },
+    ],
+});
+```
+
 ## Related
 
 - [**@standard-config/oxlint**](https://github.com/standard-config/oxlint)

@@ -1,9 +1,8 @@
 import { defineConfig } from '@standard-config/oxlint';
-import { composeOxlintConfigs } from './src/utilities.ts';
+import { getOxlintConfigs } from './src/utilities.ts';
 
-const { configBase, configConfigFiles } = composeOxlintConfigs({
+const { configBase, configConfigFiles } = getOxlintConfigs({
 	react: true,
-	stylistic: true,
 });
 
 export default defineConfig(configBase, {
