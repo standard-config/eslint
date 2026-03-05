@@ -1,6 +1,9 @@
 import { defineConfig } from 'tsdown';
 
 export default defineConfig({
+	deps: {
+		skipNodeModulesBundle: true,
+	},
 	dts: {
 		sourcemap: true,
 	},
@@ -11,6 +14,5 @@ export default defineConfig({
 	],
 	failOnWarn: true,
 	publint: true,
-	skipNodeModulesBundle: true,
 	sourcemap: true,
 });
