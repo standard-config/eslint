@@ -34,8 +34,8 @@ importers:
         version: 8.57.0(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
     devDependencies:
       '@standard-config/oxlint':
-        specifier: ^1.5.1
-        version: 1.5.1(oxlint-tsgolint@0.16.0)(oxlint@1.55.0(oxlint-tsgolint@0.16.0))
+        specifier: ^1.5.2
+        version: 1.5.2(oxlint-tsgolint@0.16.0)(oxlint@1.55.0(oxlint-tsgolint@0.16.0))
       '@standard-config/prettier':
         specifier: ^1.11.0
         version: 1.11.0(prettier@3.8.1)
@@ -673,8 +673,8 @@ packages:
   '@rolldown/pluginutils@1.0.0-rc.9':
     resolution: {integrity: sha512-w6oiRWgEBl04QkFZgmW+jnU1EC9b57Oihi2ot3HNWIQRqgHp5PnYDia5iZ5FF7rpa4EQdiqMDXjlqKGXBhsoXw==}
 
-  '@standard-config/oxlint@1.5.1':
-    resolution: {integrity: sha512-Y/CBe/aaRxEHydZj7hI23VBVhpQhnKm8rGHDFbANrasHJ7YoUn+AbtYMhWPjjqlh7ZaqJoORjNWM3ptilhcxQg==}
+  '@standard-config/oxlint@1.5.2':
+    resolution: {integrity: sha512-vpScOgs2SfcL47ci4aqaGJm+IoOICiVG+XbqwkDDLLnUAhB9JStmJzuxTn71jalaMFw8sjHw/MinXd5eTtlxWw==}
     engines: {node: '>=20'}
     peerDependencies:
       oxlint: '>=1.52.0'
@@ -2685,7 +2685,7 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.0-rc.9': {}
 
-  '@standard-config/oxlint@1.5.1(oxlint-tsgolint@0.16.0)(oxlint@1.55.0(oxlint-tsgolint@0.16.0))':
+  '@standard-config/oxlint@1.5.2(oxlint-tsgolint@0.16.0)(oxlint@1.55.0(oxlint-tsgolint@0.16.0))':
     dependencies:
       oxlint: 1.55.0(oxlint-tsgolint@0.16.0)
     optionalDependencies:
