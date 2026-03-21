@@ -136,8 +136,8 @@ export default function getOxlintConfigs({
 	}
 
 	return {
-		configBase,
-		configConfigFiles,
-		configReact,
+		oxlintConfigBase: configBase,
+		oxlintConfigConfigFiles: configConfigFiles,
+		oxlintConfigReact: configReact,
 	};
 }

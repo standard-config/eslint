@@ -16,17 +16,17 @@ export type OxlintConfigEntries = {
 	 * Primary config defining base rules and JS plugins shared across all
 	 * configs. Meant to be merged with the root config.
 	 */
-	configBase: OxlintConfig;
+	oxlintConfigBase: OxlintConfig;
 	/**
 	 * Optional override entry containing stylistic rules that target config
-	 * files. Intended for explicit overrides, as `configBase` already includes
-	 * these rules when `stylistic` is enabled.
+	 * files. Intended for explicit overrides, as `oxlintConfigBase` already
+	 * includes these rules when `stylistic` is enabled (on by default).
 	 */
-	configConfigFiles: OxlintOverrideEntry;
+	oxlintConfigConfigFiles: OxlintOverrideEntry;
 	/**
 	 * Optional override entry containing rules that target `*.tsx` files.
-	 * Intended for explicit overrides, as `configBase` already includes these
-	 * rules when `react` is enabled.
+	 * Intended for explicit overrides, as `oxlintConfigBase` already includes
+	 * these rules when `react` is enabled.
 	 */
-	configReact: OxlintOverrideEntry;
+	oxlintConfigReact: OxlintOverrideEntry;
 };

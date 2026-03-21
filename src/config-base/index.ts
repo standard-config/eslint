@@ -1,7 +1,6 @@
 import type { LinterConfigEntry } from '../types/index.d.ts';
 import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
-import tseslint from 'typescript-eslint';
 import rulesCore from './rules-core.ts';
 import rulesPerfectionist from './rules-perfectionist.ts';
 import rulesStylistic from './rules-stylistic.ts';
@@ -18,13 +17,6 @@ const config: LinterConfigEntry = {
 		'@stylistic': pluginStylistic,
 		'perfectionist': pluginPerfectionist,
 	},
-	languageOptions: {
-		parser: tseslint.parser,
-		parserOptions: {
-			projectService: true,
-			warnOnUnsupportedTypeScriptVersion: false,
-		},
-	},
 	linterOptions: {
 		reportUnusedDisableDirectives: 'error',
 		reportUnusedInlineConfigs: 'error',
@@ -35,5 +27,22 @@ const config: LinterConfigEntry = {
 		...rulesStylistic,
 	},
 };
+
+/* oxlint-disable-next-line typescript/consistent-type-imports */
+let tseslint: typeof import('typescript-eslint') | undefined;
+
+try {
+	tseslint = await import('typescript-eslint');
+} catch {}
+
+if (tseslint && Object.hasOwn(tseslint, 'parser')) {
+	config.languageOptions = {
+		parser: tseslint.parser,
+		parserOptions: {
+			projectService: true,
+			warnOnUnsupportedTypeScriptVersion: false,
+		},
+	};
+}
 
 export default config;

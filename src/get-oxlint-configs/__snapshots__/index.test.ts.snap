@@ -2,7 +2,7 @@
 
 exports[`Base > generates valid Oxlint config entries 1`] = `
 {
-  "configBase": {
+  "oxlintConfigBase": {
     "jsPlugins": [
       {
         "name": "stylistic",
@@ -342,7 +342,7 @@ exports[`Base > generates valid Oxlint config entries 1`] = `
       ],
     },
   },
-  "configConfigFiles": {
+  "oxlintConfigConfigFiles": {
     "rules": {
       "perfectionist/sort-objects": [
         "error",
@@ -403,13 +403,13 @@ exports[`Base > generates valid Oxlint config entries 1`] = `
       ],
     },
   },
-  "configReact": {},
+  "oxlintConfigReact": {},
 }
 `;
 
 exports[`Base > skips stylistic rules 1`] = `
 {
-  "configBase": {
+  "oxlintConfigBase": {
     "rules": {
       "eslint/camelcase": [
         "error",
@@ -426,14 +426,14 @@ exports[`Base > skips stylistic rules 1`] = `
       ],
     },
   },
-  "configConfigFiles": {},
-  "configReact": {},
+  "oxlintConfigConfigFiles": {},
+  "oxlintConfigReact": {},
 }
 `;
 
 exports[`React > generates valid Oxlint config entries 1`] = `
 {
-  "configBase": {
+  "oxlintConfigBase": {
     "jsPlugins": [
       {
         "name": "stylistic",
@@ -894,7 +894,7 @@ exports[`React > generates valid Oxlint config entries 1`] = `
       },
     },
   },
-  "configConfigFiles": {
+  "oxlintConfigConfigFiles": {
     "rules": {
       "perfectionist/sort-objects": [
         "error",
@@ -955,7 +955,7 @@ exports[`React > generates valid Oxlint config entries 1`] = `
       ],
     },
   },
-  "configReact": {
+  "oxlintConfigReact": {
     "rules": {
       "perfectionist/sort-jsx-props": [
         "error",
@@ -1057,7 +1057,7 @@ exports[`React > generates valid Oxlint config entries 1`] = `
 
 exports[`React > skips stylistic rules 1`] = `
 {
-  "configBase": {
+  "oxlintConfigBase": {
     "jsPlugins": [
       {
         "name": "react-js",
@@ -1157,8 +1157,8 @@ exports[`React > skips stylistic rules 1`] = `
       },
     },
   },
-  "configConfigFiles": {},
-  "configReact": {
+  "oxlintConfigConfigFiles": {},
+  "oxlintConfigReact": {
     "rules": {
       "react-hooks-js/component-hook-factories": "error",
       "react-hooks-js/config": "error",

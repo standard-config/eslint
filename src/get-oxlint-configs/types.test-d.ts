@@ -7,9 +7,11 @@ import { expectTypeOf, test } from 'vitest';
 
 test('exposes valid types', () => {
 	expectTypeOf<OxlintConfigEntries>().toBeObject();
-	expectTypeOf<OxlintConfigEntries>().toHaveProperty('configBase');
-	expectTypeOf<OxlintConfigEntries>().toHaveProperty('configConfigFiles');
-	expectTypeOf<OxlintConfigEntries>().toHaveProperty('configReact');
+	expectTypeOf<OxlintConfigEntries>().toHaveProperty('oxlintConfigBase');
+	expectTypeOf<OxlintConfigEntries>().toHaveProperty(
+		'oxlintConfigConfigFiles'
+	);
+	expectTypeOf<OxlintConfigEntries>().toHaveProperty('oxlintConfigReact');
 
 	expectTypeOf<OxlintConfigEntriesOptions>().toBeObject();
 	expectTypeOf<OxlintConfigEntriesOptions>().toHaveProperty('react');

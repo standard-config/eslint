@@ -1,9 +1,8 @@
 import type { Config } from 'eslint/config';
-import type { StandardConfig, StandardConfigArray } from '../types/index.d.ts';
+import type { StandardConfigArray } from '../types/index.d.ts';
 import { defineConfig as eslintDefineConfig } from 'eslint/config';
 import configBase from '../config-base/index.ts';
 import configConfigFiles from '../config-config-files/index.ts';
-import configIgnores from '../config-ignores/index.ts';
 import configReact from '../config-react/index.ts';
 
 /**
@@ -16,7 +15,6 @@ export default function defineConfig(
 		name: 'Standard Config',
 		files: ['**/*.{ts,tsx,cts,mts}'],
 		extends: [
-			configIgnores,
 			configBase,
 			{
 				files: ['**/*.config.{ts,cts,mts}'],
@@ -28,34 +26,27 @@ export default function defineConfig(
 }
 
 function normalizeExtensionConfigs(configs: StandardConfigArray) {
-	const configArray = configs.flat();
-	const extensions: Array<Config | Config[]> = [];
+	const extensionConfigs: Array<Config | Config[]> = [];
+	let includeReactConfig = false;
 
-	if (configArray.length === 0) {
-		return extensions;
+	for (const config of configs.flat()) {
+		const { react, ...otherConfig } = config;
+
+		if (Object.keys(otherConfig).length > 0) {
+			extensionConfigs.push(eslintDefineConfig(otherConfig));
+		}
+
+		if (react !== undefined) {
+			includeReactConfig = react;
+		}
 	}
 
-	if ((configArray[0] as StandardConfig).react) {
-		extensions.push({
+	if (includeReactConfig) {
+		extensionConfigs.unshift({
 			files: ['**/*.tsx'],
 			...configReact,
 		});
 	}
 
-	extensions.push(
-		eslintDefineConfig(
-			// Ensure `react` doesn’t break the expected config structure
-			configArray.map((configEntry) => {
-				if (Array.isArray(configEntry)) {
-					return configEntry;
-				}
-
-				/* oxlint-disable-next-line eslint/no-unused-vars */
-				const { react, ...config } = configEntry as StandardConfig;
-				return config;
-			})
-		)
-	);
-
-	return extensions;
+	return extensionConfigs;
 }

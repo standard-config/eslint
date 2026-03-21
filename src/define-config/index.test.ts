@@ -58,21 +58,30 @@ test('supports the `react` option', () => {
 		})
 	);
 
-	config = defineConfig({
-		react: false,
-	});
+	config = defineConfig({}, { react: true });
 
 	expect(config).toBeInstanceOf(Array);
+	expect(config).toContainEqual(
+		expect.objectContaining({
+			name: expect.stringContaining('React'),
+		})
+	);
 
-	/* @ts-expect-error */
-	defineConfig({}, { react: true });
+	config = defineConfig([{}, {}, { react: true }]);
 
-	/* @ts-expect-error */
-	defineConfig([{}, { react: true }]);
+	expect(config).toBeInstanceOf(Array);
+	expect(config).toContainEqual(
+		expect.objectContaining({
+			name: expect.stringContaining('React'),
+		})
+	);
 
-	/* @ts-expect-error */
-	defineConfig([[{ react: true }]]);
+	config = defineConfig({ react: true }, {}, {}, {}, { react: false });
 
-	/* @ts-expect-error */
-	defineConfig({ react: 1 });
+	expect(config).toBeInstanceOf(Array);
+	expect(config).not.toContainEqual(
+		expect.objectContaining({
+			name: expect.stringContaining('React'),
+		})
+	);
 });

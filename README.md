@@ -46,15 +46,15 @@ In your `oxlint.config.ts`:
 import { getOxlintConfigs } from '@standard-config/eslint/utilities';
 import { defineConfig } from '@standard-config/oxlint';
 
-const { configBase, configConfigFiles } = getOxlintConfigs({
+const { oxlintConfigBase, oxlintConfigConfigFiles } = getOxlintConfigs({
     // Optional, as above
     react: true,
 });
 
-// Merge `configBase` at the root of your config, as it defines
+// Merge `oxlintConfigBase` at the root of your config, as it defines
 // all supported third-party rules from this config, including
 // the resolved `jsPlugins`
-export default defineConfig(configBase, {
+export default defineConfig(oxlintConfigBase, {
     react: true,
     rules: {
         // Example override
@@ -62,11 +62,11 @@ export default defineConfig(configBase, {
     },
     overrides: [
         {
-            // `configConfigFiles` is an optional override entry
+            // `oxlintConfigConfigFiles` is an optional override entry
             // intended for config files other than `**/*.config.ts`
-            // (those are already covered by `configBase`)
+            // (those are already covered by `oxlintConfigBase`)
             files: ['config/**/*.ts'],
-            ...configConfigFiles,
+            ...oxlintConfigConfigFiles,
         },
     ],
 });

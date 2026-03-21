@@ -19,9 +19,4 @@ export type StandardConfig = Exclude<InfiniteLinterConfig, unknown[]> & {
 	react?: boolean;
 };
 
-type InfiniteLinterConfigs = [StandardConfig, ...InfiniteLinterConfig[]];
-
-export type StandardConfigArray =
-	| InfiniteLinterConfig[]
-	| InfiniteLinterConfigs
-	| [InfiniteLinterConfigs, ...InfiniteLinterConfig[]];
+export type StandardConfigArray = Array<StandardConfig | StandardConfig[]>;

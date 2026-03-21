@@ -20,13 +20,13 @@ describe('Base', () => {
 		const result = getOxlintConfigs();
 
 		expect(result).toStrictEqual({
-			configBase: expect.any(Object),
-			configConfigFiles: expect.any(Object),
-			configReact: {},
+			oxlintConfigBase: expect.any(Object),
+			oxlintConfigConfigFiles: expect.any(Object),
+			oxlintConfigReact: {},
 		});
 
-		expect(defineConfig(result.configBase)).toBeDefined();
-		expect(defineConfig(result.configConfigFiles)).toBeDefined();
+		expect(defineConfig(result.oxlintConfigBase)).toBeDefined();
+		expect(defineConfig(result.oxlintConfigConfigFiles)).toBeDefined();
 		expect(result).toMatchSnapshot();
 	});
 
@@ -34,12 +34,12 @@ describe('Base', () => {
 		const result = getOxlintConfigs({ stylistic: false });
 
 		expect(result).toStrictEqual({
-			configBase: expect.any(Object),
-			configConfigFiles: {},
-			configReact: {},
+			oxlintConfigBase: expect.any(Object),
+			oxlintConfigConfigFiles: {},
+			oxlintConfigReact: {},
 		});
 
-		expect(defineConfig(result.configBase)).toBeDefined();
+		expect(defineConfig(result.oxlintConfigBase)).toBeDefined();
 		expect(result).toMatchSnapshot();
 	});
 });
@@ -49,14 +49,14 @@ describe('React', () => {
 		const result = getOxlintConfigs({ react: true });
 
 		expect(result).toStrictEqual({
-			configBase: expect.any(Object),
-			configConfigFiles: expect.any(Object),
-			configReact: expect.any(Object),
+			oxlintConfigBase: expect.any(Object),
+			oxlintConfigConfigFiles: expect.any(Object),
+			oxlintConfigReact: expect.any(Object),
 		});
 
-		expect(defineConfig(result.configBase)).toBeDefined();
-		expect(defineConfig(result.configConfigFiles)).toBeDefined();
-		expect(defineConfig(result.configReact)).toBeDefined();
+		expect(defineConfig(result.oxlintConfigBase)).toBeDefined();
+		expect(defineConfig(result.oxlintConfigConfigFiles)).toBeDefined();
+		expect(defineConfig(result.oxlintConfigReact)).toBeDefined();
 		expect(result).toMatchSnapshot();
 	});
 
@@ -64,13 +64,13 @@ describe('React', () => {
 		const result = getOxlintConfigs({ react: true, stylistic: false });
 
 		expect(result).toStrictEqual({
-			configBase: expect.any(Object),
-			configConfigFiles: {},
-			configReact: expect.any(Object),
+			oxlintConfigBase: expect.any(Object),
+			oxlintConfigConfigFiles: {},
+			oxlintConfigReact: expect.any(Object),
 		});
 
-		expect(defineConfig(result.configBase)).toBeDefined();
-		expect(defineConfig(result.configReact)).toBeDefined();
+		expect(defineConfig(result.oxlintConfigBase)).toBeDefined();
+		expect(defineConfig(result.oxlintConfigReact)).toBeDefined();
 		expect(result).toMatchSnapshot();
 	});
 });
