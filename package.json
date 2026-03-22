@@ -39,19 +39,17 @@
 		}
 	},
 	"engines": {
-		"node": ">=20"
+		"node": ">=22"
 	},
 	"packageManager": "pnpm@10.32.1",
 	"dependencies": {
 		"@stylistic/eslint-plugin": "^5.10.0",
 		"eslint-plugin-perfectionist": "^5.7.0",
 		"eslint-plugin-react": "^7.37.5",
-		"eslint-plugin-react-hooks": "^7.0.1",
-		"eslint-plugin-react-naming-convention": "^2.13.0",
-		"eslint-plugin-react-x": "^2.13.0"
+		"eslint-plugin-react-x": "^3.0.0"
 	},
 	"peerDependencies": {
-		"eslint": ">=9",
+		"eslint": ">=10.1.0",
 		"oxlint": ">=1.56.0",
 		"typescript-eslint": ">=8.57.0"
 	},
@@ -73,7 +71,7 @@
 		"@standard-config/tsconfig": "^2.0.2",
 		"@types/node": "^22.19.15",
 		"@vitest/coverage-v8": "^4.1.0",
-		"eslint": "^9.39.4",
+		"eslint": "^10.1.0",
 		"husky": "^9.1.7",
 		"jiti": "^2.6.1",
 		"oxlint": "^1.56.0",

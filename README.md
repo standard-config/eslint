@@ -43,15 +43,13 @@ Standard Config comes with a set of utilities that can translate this config to 
 In your `oxlint.config.ts`:
 
 ```ts
-import { createOxlintConfig } from '@standard-config/eslint/utilities';
+import { oxlintConfigBase } from '@standard-config/eslint/utilities';
 import { defineConfig } from '@standard-config/oxlint';
 
-export default defineConfig({
-    extends: [
-        createOxlintConfig({
-            react: true,
-        }),
-    ],
+export default defineConfig(oxlintConfigBase, {
+    rules: {
+        /* Optional overrides */
+    },
 });
 ```
 

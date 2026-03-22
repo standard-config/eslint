@@ -1,13 +1,8 @@
-import type { ESLint } from 'eslint';
 import type { LinterConfigEntry } from '../types/eslint.d.ts';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
 import pluginReact from 'eslint-plugin-react';
-import pluginReactHooks from 'eslint-plugin-react-hooks';
-import pluginReactNamingConvention from 'eslint-plugin-react-naming-convention';
 import pluginReactX from 'eslint-plugin-react-x';
 import rulesPerfectionist from './rules-perfectionist.ts';
-import rulesReactHooks from './rules-react-hooks.ts';
-import rulesReactNamingConvention from './rules-react-naming-convention.ts';
 import rulesReactX from './rules-react-x.ts';
 import rulesReact from './rules-react.ts';
 
@@ -23,8 +18,6 @@ const config: LinterConfigEntry = {
 	plugins: {
 		'perfectionist': pluginPerfectionist,
 		'react': pluginReact,
-		'react-hooks': pluginReactHooks as ESLint.Plugin,
-		'react-naming-convention': pluginReactNamingConvention,
 		'react-x': pluginReactX,
 	},
 	settings: {
@@ -35,8 +28,6 @@ const config: LinterConfigEntry = {
 	rules: {
 		...rulesPerfectionist,
 		...rulesReact,
-		...rulesReactHooks,
-		...rulesReactNamingConvention,
 		...rulesReactX,
 	},
 };

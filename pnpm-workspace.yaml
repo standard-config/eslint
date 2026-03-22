@@ -4,12 +4,12 @@ onlyBuiltDependencies:
   - esbuild
 
 peerDependencyRules:
-  allowedVersions:
-    vitest: '*'
+  allowAny:
+    - eslint
+    - vitest
 
 strictPeerDependencies: true
 
 updateConfig:
   ignoreDependencies:
     - '@types/node'
-    - eslint

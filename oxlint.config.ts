@@ -1,15 +1,7 @@
 import { defineConfig } from '@standard-config/oxlint';
-import {
-	createOxlintConfig,
-	oxlintConfigConfigFiles,
-} from './src/utilities.ts';
+import { oxlintConfigBase, oxlintConfigConfigFiles } from './src/utilities.ts';
 
-export default defineConfig({
-	extends: [
-		createOxlintConfig({
-			react: true,
-		}),
-	],
+export default defineConfig(oxlintConfigBase, {
 	rules: {
 		'typescript/no-deprecated': 'off',
 	},

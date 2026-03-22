@@ -8,8 +8,6 @@ const PLUGINS = [
 	'@stylistic/eslint-plugin',
 	'eslint-plugin-perfectionist',
 	'eslint-plugin-react',
-	'eslint-plugin-react-hooks',
-	'eslint-plugin-react-naming-convention',
 	'eslint-plugin-react-x',
 ];
 
