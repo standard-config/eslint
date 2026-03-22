@@ -43,31 +43,14 @@ Standard Config comes with a set of utilities that can translate this config to 
 In your `oxlint.config.ts`:
 
 ```ts
-import { getOxlintConfigs } from '@standard-config/eslint/utilities';
+import { createOxlintConfig } from '@standard-config/eslint/utilities';
 import { defineConfig } from '@standard-config/oxlint';
 
-const { oxlintConfigBase, oxlintConfigConfigFiles } = getOxlintConfigs({
-    // Optional, as above
-    react: true,
-});
-
-// Merge `oxlintConfigBase` at the root of your config, as it defines
-// all supported third-party rules from this config, including
-// the resolved `jsPlugins`
-export default defineConfig(oxlintConfigBase, {
-    react: true,
-    rules: {
-        // Example override
-        'react-js/function-component-definition': 'off',
-    },
-    overrides: [
-        {
-            // `oxlintConfigConfigFiles` is an optional override entry
-            // intended for config files other than `**/*.config.ts`
-            // (those are already covered by `oxlintConfigBase`)
-            files: ['config/**/*.ts'],
-            ...oxlintConfigConfigFiles,
-        },
+export default defineConfig({
+    extends: [
+        createOxlintConfig({
+            react: true,
+        }),
     ],
 });
 ```

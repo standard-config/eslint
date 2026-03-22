@@ -1,4 +1,4 @@
-import type { LinterConfigRules } from '../types/index.d.ts';
+import type { LinterConfigRules } from '../types/eslint.d.ts';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import transformRules from '../transform-rules/index.ts';
 

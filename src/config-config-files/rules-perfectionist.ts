@@ -1,4 +1,4 @@
-import type { LinterConfigRules } from '../types/index.d.ts';
+import type { LinterConfigRules } from '../types/eslint.d.ts';
 
 const rules: LinterConfigRules = {
 	'perfectionist/sort-objects': [

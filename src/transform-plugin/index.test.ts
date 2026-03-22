@@ -1,6 +1,8 @@
 import { isAbsolute } from 'node:path';
-import { expect, test } from 'vitest';
+import { expect, test, vi } from 'vitest';
 import transformPlugin from './index.ts';
+
+vi.unmock('./index.ts');
 
 const PLUGINS = [
 	'@stylistic/eslint-plugin',

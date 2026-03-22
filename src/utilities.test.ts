@@ -3,7 +3,10 @@ import * as exports from './utilities.ts';
 
 test('exposes correct public API', () => {
 	expect({ ...exports }).toStrictEqual({
-		getOxlintConfigs: expect.any(Function),
+		createOxlintConfig: expect.any(Function),
+		oxlintConfigBase: expect.any(Object),
+		oxlintConfigConfigFiles: expect.any(Object),
+		oxlintConfigReact: expect.any(Object),
 		transformPlugin: expect.any(Function),
 		transformRules: expect.any(Function),
 	});

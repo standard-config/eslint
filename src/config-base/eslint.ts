@@ -1,4 +1,4 @@
-import type { LinterConfigEntry } from '../types/index.d.ts';
+import type { LinterConfigEntry } from '../types/eslint.d.ts';
 import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
 import rulesCore from './rules-core.ts';

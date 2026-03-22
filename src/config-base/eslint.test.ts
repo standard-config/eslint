@@ -1,5 +1,5 @@
-import type { LinterConfigEntry } from '../types/index.d.ts';
-import { defineConfig } from 'eslint/config';
+import type { LinterConfigEntry } from '../types/eslint.d.ts';
+import { defineConfig as eslintDefineConfig } from 'eslint/config';
 import { beforeEach, expect, expectTypeOf, test, vi } from 'vitest';
 
 beforeEach(() => {
@@ -7,10 +7,12 @@ beforeEach(() => {
 });
 
 test('is a valid ESLint config', async () => {
-	const { default: config } = await import('./index.ts');
+	const { default: config } = await import('./eslint.ts');
 
 	expectTypeOf(config).toEqualTypeOf<LinterConfigEntry>();
-	expect(defineConfig(config)).toBeInstanceOf(Array);
+	expectTypeOf(eslintDefineConfig(config)).toEqualTypeOf<
+		ReturnType<typeof eslintDefineConfig>
+	>();
 
 	expect(config).toMatchSnapshot();
 });
@@ -18,10 +20,12 @@ test('is a valid ESLint config', async () => {
 test('skips parser options when `typescript-eslint` is unavailable', async () => {
 	vi.doMock('typescript-eslint', () => ({}));
 
-	const { default: config } = await import('./index.ts');
+	const { default: config } = await import('./eslint.ts');
 
 	expectTypeOf(config).toEqualTypeOf<LinterConfigEntry>();
-	expect(defineConfig(config)).toBeInstanceOf(Array);
+	expectTypeOf(eslintDefineConfig(config)).toEqualTypeOf<
+		ReturnType<typeof eslintDefineConfig>
+	>();
 
 	expect(config).toHaveProperty('linterOptions');
 	expect(config).not.toHaveProperty('languageOptions');

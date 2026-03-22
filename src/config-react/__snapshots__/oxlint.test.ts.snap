@@ -1,0 +1,101 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`is a valid Oxlint config 1`] = `
+{
+  "rules": {
+    "perfectionist/sort-jsx-props": [
+      "error",
+      {
+        "customGroups": [
+          {
+            "elementNamePattern": "^as$",
+            "groupName": "as",
+          },
+          {
+            "elementNamePattern": "^on.+",
+            "groupName": "callback",
+          },
+          {
+            "elementNamePattern": "^children$",
+            "groupName": "children",
+          },
+          {
+            "elementNamePattern": "^key$",
+            "groupName": "key",
+          },
+          {
+            "elementNamePattern": "^ref$",
+            "groupName": "ref",
+          },
+          {
+            "elementNamePattern": "^dangerously.+",
+            "groupName": "unsafe",
+          },
+        ],
+        "groups": [
+          "key",
+          "ref",
+          "as",
+          "unknown",
+          "shorthand-prop",
+          "callback",
+          "children",
+          "unsafe",
+        ],
+        "type": "unsorted",
+      },
+    ],
+    "react-hooks-js/component-hook-factories": "error",
+    "react-hooks-js/config": "error",
+    "react-hooks-js/error-boundaries": "error",
+    "react-hooks-js/gating": "error",
+    "react-hooks-js/globals": "error",
+    "react-hooks-js/immutability": "error",
+    "react-hooks-js/incompatible-library": "error",
+    "react-hooks-js/preserve-manual-memoization": "error",
+    "react-hooks-js/purity": "error",
+    "react-hooks-js/refs": "error",
+    "react-hooks-js/set-state-in-effect": "error",
+    "react-hooks-js/set-state-in-render": "error",
+    "react-hooks-js/static-components": "error",
+    "react-hooks-js/unsupported-syntax": "error",
+    "react-hooks-js/use-memo": "error",
+    "react-hooks-js/void-use-memo": "error",
+    "react-js/function-component-definition": [
+      "error",
+      {
+        "namedComponents": [
+          "arrow-function",
+          "function-declaration",
+        ],
+        "unnamedComponents": "arrow-function",
+      },
+    ],
+    "react-js/no-adjacent-inline-elements": "error",
+    "react-naming-convention/component-name": "error",
+    "react-naming-convention/context-name": "error",
+    "react-naming-convention/ref-name": "error",
+    "react-naming-convention/use-state": "error",
+    "react-x/jsx-dollar": "error",
+    "react-x/jsx-key-before-spread": "error",
+    "react-x/jsx-no-iife": "error",
+    "react-x/no-access-state-in-setstate": "error",
+    "react-x/no-class-component": "error",
+    "react-x/no-context-provider": "error",
+    "react-x/no-default-props": "error",
+    "react-x/no-duplicate-key": "error",
+    "react-x/no-forward-ref": "error",
+    "react-x/no-misused-capture-owner-stack": "error",
+    "react-x/no-nested-component-definitions": "error",
+    "react-x/no-nested-lazy-component-declarations": "error",
+    "react-x/no-prop-types": "error",
+    "react-x/no-unnecessary-use-callback": "error",
+    "react-x/no-unnecessary-use-memo": "error",
+    "react-x/no-unstable-context-value": "error",
+    "react-x/no-unstable-default-props": "error",
+    "react-x/no-use-context": "error",
+    "react-x/prefer-destructuring-assignment": "error",
+    "react-x/prefer-use-state-lazy-initialization": "error",
+  },
+}
+`;

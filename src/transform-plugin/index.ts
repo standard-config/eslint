@@ -1,4 +1,4 @@
-import type { OxlintPluginEntry } from './types.d.ts';
+import type { OxlintPluginEntry } from '../types/oxlint.d.ts';
 import { fileURLToPath } from 'node:url';
 
 /**

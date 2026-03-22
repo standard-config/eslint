@@ -1,5 +1,5 @@
 import type { ESLint } from 'eslint';
-import type { LinterConfigEntry } from '../types/index.d.ts';
+import type { LinterConfigEntry } from '../types/eslint.d.ts';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';

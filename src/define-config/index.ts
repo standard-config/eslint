@@ -1,9 +1,9 @@
 import type { Config } from 'eslint/config';
-import type { StandardConfigArray } from '../types/index.d.ts';
+import type { StandardConfigArray } from '../types/eslint.d.ts';
 import { defineConfig as eslintDefineConfig } from 'eslint/config';
-import configBase from '../config-base/index.ts';
-import configConfigFiles from '../config-config-files/index.ts';
-import configReact from '../config-react/index.ts';
+import configBase from '../config-base/eslint.ts';
+import configConfigFiles from '../config-config-files/eslint.ts';
+import configReact from '../config-react/eslint.ts';
 
 /**
  * Combine Standard Config with optional additional config.

@@ -1,9 +1,10 @@
+import type { StandardConfigOptions } from './common.d.ts';
 import type {
 	LinterConfigEntry,
 	LinterConfigRules,
 	StandardConfig,
 	StandardConfigArray,
-} from './index.d.ts';
+} from './eslint.d.ts';
 import { expectTypeOf, test } from 'vitest';
 
 test('exposes valid types', () => {
@@ -12,7 +13,7 @@ test('exposes valid types', () => {
 
 	expectTypeOf<StandardConfig>().toBeObject();
 	expectTypeOf<StandardConfig>().toHaveProperty('react');
-	expectTypeOf<StandardConfig>().not.toHaveProperty('stylistic');
+	expectTypeOf<StandardConfig>().not.toEqualTypeOf<StandardConfigOptions>();
 
 	expectTypeOf<StandardConfigArray>().toBeArray();
 });
