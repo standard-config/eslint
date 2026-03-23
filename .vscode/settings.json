@@ -3,6 +3,7 @@
 	"files.exclude": {
 		".editorconfig": true
 	},
+	"js/ts.tsdk.path": "node_modules/typescript/lib",
 	"search.exclude": {
 		"**/*.lock.yml": true,
 		"**/*.snap": true,

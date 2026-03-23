@@ -7,13 +7,6 @@ on:
   pull_request:
     branches:
       - main
-  workflow_run:
-    workflows:
-      - Oxlint
-    types:
-      - completed
-    branches:
-      - oxlint/**
 
 permissions:
   contents: read
@@ -26,7 +19,6 @@ jobs:
       fail-fast: false
       matrix:
         node-version:
-          - 20
           - 22
           - 24
           - latest
