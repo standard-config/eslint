@@ -1,8 +1,8 @@
 import type { OxlintConfig } from 'oxlint';
 import clone from '../clone/index.ts';
-import configBase from '../config-base/oxlint.ts';
-import transformPlugin from '../transform-plugin/index.ts';
-import transformRules from '../transform-rules/index.ts';
+import oxlintConfigBase from '../config-base/oxlint.ts';
+import transformPlugin from '../utilities/transform-plugin/index.ts';
+import transformRules from '../utilities/transform-rules/index.ts';
 import rulesPerfectionist from './rules-perfectionist.ts';
 import rulesReactX from './rules-react-x.ts';
 import rulesReact from './rules-react.ts';
@@ -13,7 +13,7 @@ import rulesReact from './rules-react.ts';
  * Primary config entry. Includes React-related rules.
  */
 const config: OxlintConfig = {
-	...clone(configBase),
+	...clone(oxlintConfigBase),
 
 	settings: {
 		react: {

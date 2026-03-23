@@ -2,7 +2,7 @@ import type { ESLint, Linter } from 'eslint';
 import { expect, vi } from 'vitest';
 
 // Do not expand dependency paths in snapshots
-vi.mock(import('./src/transform-plugin/index.ts'), () => ({
+vi.mock(import('./src/utilities/transform-plugin/index.ts'), () => ({
 	default: (name, specifier) => ({
 		name,
 		specifier,

@@ -1,7 +1,7 @@
 import type { OxlintConfig } from 'oxlint';
-import configConfigFiles from '../config-config-files/oxlint.ts';
-import transformPlugin from '../transform-plugin/index.ts';
-import transformRules from '../transform-rules/index.ts';
+import oxlintConfigConfigFiles from '../config-config-files/oxlint.ts';
+import transformPlugin from '../utilities/transform-plugin/index.ts';
+import transformRules from '../utilities/transform-rules/index.ts';
 import rulesCore from './rules-core.ts';
 import rulesPerfectionist from './rules-perfectionist.ts';
 import rulesStylistic from './rules-stylistic.ts';
@@ -39,7 +39,7 @@ const config: OxlintConfig = {
 	overrides: [
 		{
 			files: ['**/*.config.{ts,cts,mts}'],
-			...configConfigFiles,
+			...oxlintConfigConfigFiles,
 		},
 	],
 };

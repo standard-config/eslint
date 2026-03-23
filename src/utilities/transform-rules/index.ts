@@ -1,5 +1,5 @@
 import type { Linter } from 'eslint';
-import type { LinterConfigRules } from '../types/eslint.d.ts';
+import type { LinterConfigRules } from '../../types/eslint.d.ts';
 
 /**
  * Modify a set of ESLint rules.
