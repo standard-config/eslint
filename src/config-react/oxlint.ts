@@ -4,7 +4,6 @@ import oxlintConfigBase from '../config-base/oxlint.ts';
 import transformPlugin from '../utilities/transform-plugin/index.ts';
 import transformRules from '../utilities/transform-rules/index.ts';
 import rulesPerfectionist from './rules-perfectionist.ts';
-import rulesReactX from './rules-react-x.ts';
 import rulesReact from './rules-react.ts';
 
 /**
@@ -23,19 +22,13 @@ const config: OxlintConfig = {
 	},
 };
 
-config.jsPlugins!.push(
-	transformPlugin('react-js', 'eslint-plugin-react'),
-	transformPlugin('react-x', 'eslint-plugin-react-x')
-);
+config.jsPlugins!.push(transformPlugin('react-x', 'eslint-plugin-react-x'));
 
 config.overrides!.push({
 	files: ['**/*.tsx'],
 	rules: {
 		...rulesPerfectionist,
 		...transformRules(rulesReact, {
-			prefix: 'react-js',
-		}),
-		...transformRules(rulesReactX, {
 			omit: [
 				// Oxlint doesn’t support type-aware rules
 				'react-x/no-implicit-key',

@@ -12,10 +12,6 @@ exports[`is a valid Oxlint config 1`] = `
       "specifier": "eslint-plugin-perfectionist",
     },
     {
-      "name": "react-js",
-      "specifier": "eslint-plugin-react",
-    },
-    {
       "name": "react-x",
       "specifier": "eslint-plugin-react-x",
     },
@@ -132,17 +128,6 @@ exports[`is a valid Oxlint config 1`] = `
             "type": "unsorted",
           },
         ],
-        "react-js/function-component-definition": [
-          "error",
-          {
-            "namedComponents": [
-              "arrow-function",
-              "function-declaration",
-            ],
-            "unnamedComponents": "arrow-function",
-          },
-        ],
-        "react-js/no-adjacent-inline-elements": "error",
         "react-x/component-hook-factories": "error",
         "react-x/error-boundaries": "error",
         "react-x/immutability": "error",

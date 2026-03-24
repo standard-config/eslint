@@ -7,7 +7,6 @@ vi.unmock('./index.ts');
 const PLUGINS = [
 	'@stylistic/eslint-plugin',
 	'eslint-plugin-perfectionist',
-	'eslint-plugin-react',
 	'eslint-plugin-react-x',
 ];
 

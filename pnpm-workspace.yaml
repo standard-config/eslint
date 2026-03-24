@@ -5,7 +5,6 @@ onlyBuiltDependencies:
 
 peerDependencyRules:
   allowAny:
-    - eslint
     - typescript
     - vitest
 

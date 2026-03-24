@@ -5,7 +5,6 @@ exports[`is a valid ESLint config 1`] = `
   "name": "React",
   "plugins": {
     "perfectionist": [ESLint.Plugin],
-    "react": [ESLint.Plugin],
     "react-x": [ESLint.Plugin],
   },
   "rules": {
@@ -79,17 +78,6 @@ exports[`is a valid ESLint config 1`] = `
     "react-x/unsupported-syntax": "error",
     "react-x/use-memo": "error",
     "react-x/use-state": "error",
-    "react/function-component-definition": [
-      "error",
-      {
-        "namedComponents": [
-          "arrow-function",
-          "function-declaration",
-        ],
-        "unnamedComponents": "arrow-function",
-      },
-    ],
-    "react/no-adjacent-inline-elements": "error",
   },
   "settings": {
     "react": {
