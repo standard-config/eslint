@@ -18,7 +18,8 @@ test('is a valid ESLint config', async () => {
 });
 
 test('skips parser options when `typescript-eslint` is unavailable', async () => {
-	vi.doMock('typescript-eslint', () => ({}));
+	/* @ts-expect-error */
+	vi.doMock('typescript-eslint', () => undefined);
 
 	const { default: config } = await import('./eslint.ts');
 
