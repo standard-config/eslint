@@ -69,7 +69,7 @@
 		"@standard-config/prettier": "^1.11.2",
 		"@standard-config/tsconfig": "^3.1.0",
 		"@types/node": "^22.19.15",
-		"@vitest/coverage-v8": "^4.1.1",
+		"@vitest/coverage-v8": "^4.1.2",
 		"eslint": "^10.1.0",
 		"husky": "^9.1.7",
 		"jiti": "^2.6.1",
