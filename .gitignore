@@ -1,6 +1,6 @@
 .DS_Store
 .github/aw
-.husky/_
+.vite-hooks/_
 coverage
 dist
 node_modules
