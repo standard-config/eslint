@@ -14,8 +14,12 @@ peerDependencyRules:
   allowAny:
     - typescript
     - vitest
+  ignoreMissing:
+    - oxlint-tsgolint
 
 strictPeerDependencies: true
+
+trustPolicy: no-downgrade
 
 updateConfig:
   ignoreDependencies:
