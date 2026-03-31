@@ -1,7 +1,9 @@
 autoInstallPeers: false
 
+blockExoticSubdeps: true
+
 catalog:
-  oxlint: ^1.57.0
+  oxlint: ^1.58.0
 
 onlyBuiltDependencies:
   - esbuild
@@ -12,10 +14,9 @@ overrides:
 
 peerDependencyRules:
   allowAny:
+    - oxlint-tsgolint
     - typescript
     - vitest
-  ignoreMissing:
-    - oxlint-tsgolint
 
 strictPeerDependencies: true
 
