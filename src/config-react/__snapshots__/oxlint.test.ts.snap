@@ -158,19 +158,6 @@ exports[`is a valid Oxlint config 1`] = `
     },
   ],
   "rules": {
-    "eslint/camelcase": [
-      "error",
-      {
-        "properties": "always",
-      },
-    ],
-    "eslint/func-name-matching": [
-      "error",
-      "never",
-      {
-        "considerPropertyDescriptor": true,
-      },
-    ],
     "perfectionist/sort-array-includes": [
       "error",
       {
