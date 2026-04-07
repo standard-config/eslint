@@ -16,6 +16,8 @@ test('defines a valid ESLint config', () => {
 		})
 	);
 
+	expect(config).toMatchSnapshot();
+
 	config = defineConfig(globalIgnores(['**/*.js']));
 
 	expect(config).toBeInstanceOf(Array);
@@ -48,6 +50,8 @@ test('supports the `react` option', () => {
 			name: expect.stringContaining('React'),
 		})
 	);
+
+	expect(config).toMatchSnapshot();
 
 	config = defineConfig([{ react: true }]);
 

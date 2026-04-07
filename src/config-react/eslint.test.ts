@@ -5,9 +5,7 @@ import config from './eslint.ts';
 
 test('is a valid ESLint config', () => {
 	expectTypeOf(config).toEqualTypeOf<LinterConfigEntry>();
-	expectTypeOf(eslintDefineConfig(config)).toEqualTypeOf<
-		ReturnType<typeof eslintDefineConfig>
-	>();
+	expectTypeOf(eslintDefineConfig).toBeCallableWith(config);
 
 	expect(config).toMatchSnapshot();
 });

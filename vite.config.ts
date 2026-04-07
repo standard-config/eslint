@@ -6,7 +6,10 @@ import {
 
 export default defineConfig({
 	test: {
-		setupFiles: ['vitest.setup.ts'],
+		setupFiles: [
+			/* prettier-ignore */
+			'vitest.setup.ts',
+		],
 		typecheck: {
 			enabled: true,
 		},

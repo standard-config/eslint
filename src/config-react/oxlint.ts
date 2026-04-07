@@ -1,7 +1,6 @@
 import type { OxlintConfig } from 'oxlint';
 import clone from '../clone/index.ts';
 import oxlintConfigBase from '../config-base/oxlint.ts';
-import transformPlugin from '../utilities/transform-plugin/index.ts';
 import transformRules from '../utilities/transform-rules/index.ts';
 import rulesPerfectionist from './rules-perfectionist.ts';
 import rulesReact from './rules-react.ts';
@@ -22,10 +21,11 @@ const config: OxlintConfig = {
 	},
 };
 
-config.jsPlugins!.push(transformPlugin('react-x', 'eslint-plugin-react-x'));
-
-config.overrides!.push({
-	files: ['**/*.tsx'],
+config.overrides!.unshift({
+	files: [
+		/* prettier-ignore */
+		'**/*.tsx',
+	],
 	rules: {
 		...rulesPerfectionist,
 		...transformRules(rulesReact, {

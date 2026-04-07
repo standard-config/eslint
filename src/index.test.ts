@@ -6,6 +6,7 @@ test('exposes correct public API', () => {
 		configBase: expect.any(Object),
 		configConfigFiles: expect.any(Object),
 		configReact: expect.any(Object),
+		configTestFiles: expect.any(Object),
 		defineConfig: expect.any(Function),
 	});
 });

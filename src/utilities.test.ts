@@ -7,6 +7,7 @@ test('exposes correct public API', () => {
 		oxlintConfigBase: expect.any(Object),
 		oxlintConfigBaseReact: expect.any(Object),
 		oxlintConfigConfigFiles: expect.any(Object),
+		oxlintConfigTestFiles: expect.any(Object),
 		transformPlugin: expect.any(Function),
 		transformRules: expect.any(Function),
 	});

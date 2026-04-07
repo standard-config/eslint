@@ -4,8 +4,6 @@ const rules: LinterConfigRules = {
 	'react-x/component-hook-factories': 'error',
 	'react-x/error-boundaries': 'error',
 	'react-x/immutability': 'error',
-	'react-x/jsx-dollar': 'error',
-	'react-x/jsx-key-before-spread': 'error',
 	'react-x/no-access-state-in-setstate': 'error',
 	'react-x/no-class-component': 'error',
 	'react-x/no-context-provider': 'error',

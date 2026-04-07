@@ -1,5 +1,6 @@
 import type { OxlintConfig } from 'oxlint';
 import oxlintConfigConfigFiles from '../config-config-files/oxlint.ts';
+import oxlintConfigTestFiles from '../config-test-files/oxlint.ts';
 import transformPlugin from '../utilities/transform-plugin/index.ts';
 import transformRules from '../utilities/transform-rules/index.ts';
 import rulesPerfectionist from './rules-perfectionist.ts';
@@ -14,6 +15,7 @@ const config: OxlintConfig = {
 	jsPlugins: [
 		transformPlugin('stylistic', '@stylistic/eslint-plugin'),
 		transformPlugin('perfectionist', 'eslint-plugin-perfectionist'),
+		transformPlugin('react-x', 'eslint-plugin-react-x'),
 	],
 	settings: {
 		react: {
@@ -34,7 +36,18 @@ const config: OxlintConfig = {
 	},
 	overrides: [
 		{
-			files: ['**/*.config.{ts,cts,mts}'],
+			files: [
+				/* prettier-ignore */
+				'**/*.test.{ts,tsx,cts,mts}',
+				'**/*.test-d.{ts,cts,mts}',
+			],
+			...oxlintConfigTestFiles,
+		},
+		{
+			files: [
+				/* prettier-ignore */
+				'**/*.config.{ts,cts,mts}',
+			],
 			...oxlintConfigConfigFiles,
 		},
 	],

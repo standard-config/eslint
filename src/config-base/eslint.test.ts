@@ -10,9 +10,7 @@ test('is a valid ESLint config', async () => {
 	const { default: config } = await import('./eslint.ts');
 
 	expectTypeOf(config).toEqualTypeOf<LinterConfigEntry>();
-	expectTypeOf(eslintDefineConfig(config)).toEqualTypeOf<
-		ReturnType<typeof eslintDefineConfig>
-	>();
+	expectTypeOf(eslintDefineConfig).toBeCallableWith(config);
 
 	expect(config).toMatchSnapshot();
 });
@@ -24,9 +22,7 @@ test('skips parser options when `typescript-eslint` is unavailable', async () =>
 	const { default: config } = await import('./eslint.ts');
 
 	expectTypeOf(config).toEqualTypeOf<LinterConfigEntry>();
-	expectTypeOf(eslintDefineConfig(config)).toEqualTypeOf<
-		ReturnType<typeof eslintDefineConfig>
-	>();
+	expectTypeOf(eslintDefineConfig).toBeCallableWith(config);
 
 	expect(config).toHaveProperty('linterOptions');
 	expect(config).not.toHaveProperty('languageOptions');
