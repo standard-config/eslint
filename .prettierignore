@@ -1,3 +1,2 @@
-*.lock.yml
 *.snap
 pnpm-lock.yaml
