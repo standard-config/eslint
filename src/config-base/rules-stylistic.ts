@@ -1,11 +1,6 @@
 import type { LinterConfigRules } from '../types/eslint.d.ts';
 
 const rules: LinterConfigRules = {
-	'@stylistic/lines-between-class-members': [
-		'error',
-		'always',
-		{ exceptAfterSingleLine: true },
-	],
 	'@stylistic/padding-line-between-statements': [
 		'error',
 		{
