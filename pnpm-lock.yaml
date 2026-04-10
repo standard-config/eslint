@@ -64,8 +64,8 @@ importers:
         specifier: ^0.3.18
         version: 0.3.18
       react:
-        specifier: ^19.2.4
-        version: 19.2.4
+        specifier: ^19.2.5
+        version: 19.2.5
       typescript:
         specifier: ^6.0.2
         version: 6.0.2
@@ -1409,8 +1409,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  react@19.2.4:
-    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
+  react@19.2.5:
+    resolution: {integrity: sha512-llUJLzz1zTUBrskt2pwZgLq59AemifIftw4aB7JxOqf1HY2FDaGDxgwpAPVzHU1kdWabH7FauP4i1oEeer2WCA==}
     engines: {node: '>=0.10.0'}
 
   rolldown@1.0.0-rc.13:
@@ -2817,7 +2817,7 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  react@19.2.4: {}
+  react@19.2.5: {}
 
   rolldown@1.0.0-rc.13:
     dependencies:
