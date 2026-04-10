@@ -73,7 +73,7 @@
 		"eslint": "^10.2.0",
 		"jiti": "^2.6.1",
 		"oxlint": "catalog:",
-		"prettier": "^3.8.1",
+		"prettier": "^3.8.2",
 		"publint": "^0.3.18",
 		"react": "^19.2.4",
 		"typescript": "^6.0.2",
