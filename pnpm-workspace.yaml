@@ -5,12 +5,8 @@ blockExoticSubdeps: true
 catalog:
   oxlint: ^1.59.0
 
-onlyBuiltDependencies:
-  - esbuild
-
 overrides:
-  '@eslint/config-helpers': 0.5.3
-  '@napi-rs/wasm-runtime': 1.1.1
+  '@types/node>undici-types': '-'
   vite-plus>oxfmt: '-'
   vite-plus>oxlint: 'catalog:'
 
@@ -19,12 +15,11 @@ peerDependencyRules:
     - oxlint-tsgolint
     - vitest
 
+strictDepBuilds: true
+
 strictPeerDependencies: true
 
 trustPolicy: no-downgrade
-
-trustPolicyExclude:
-  - undici-types
 
 updateConfig:
   ignoreDependencies:
