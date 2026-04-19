@@ -44,7 +44,7 @@
 	"packageManager": "pnpm@10.33.0",
 	"dependencies": {
 		"@stylistic/eslint-plugin": "^5.10.0",
-		"eslint-plugin-perfectionist": "^5.8.0",
+		"eslint-plugin-perfectionist": "^5.9.0",
 		"eslint-plugin-react-x": "^4.2.3"
 	},
 	"peerDependencies": {
