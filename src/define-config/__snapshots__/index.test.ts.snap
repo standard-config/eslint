@@ -130,13 +130,6 @@ exports[`defines a valid ESLint config 1`] = `
           "properties": "always",
         },
       ],
-      "func-name-matching": [
-        "error",
-        "never",
-        {
-          "considerPropertyDescriptor": true,
-        },
-      ],
       "perfectionist/sort-array-includes": [
         "error",
         {
@@ -512,13 +505,6 @@ exports[`supports the \`react\` option 1`] = `
         "error",
         {
           "properties": "always",
-        },
-      ],
-      "func-name-matching": [
-        "error",
-        "never",
-        {
-          "considerPropertyDescriptor": true,
         },
       ],
       "perfectionist/sort-array-includes": [
