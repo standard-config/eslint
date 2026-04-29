@@ -1,7 +1,5 @@
 autoInstallPeers: false
 
-blockExoticSubdeps: true
-
 catalog:
   oxlint: ^1.62.0
 
@@ -14,8 +12,6 @@ peerDependencyRules:
   allowAny:
     - oxlint-tsgolint
     - vitest
-
-strictDepBuilds: true
 
 strictPeerDependencies: true
 
