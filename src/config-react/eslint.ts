@@ -1,6 +1,6 @@
 import type { LinterConfigEntry } from '../types/eslint.d.ts';
+import pluginReact from '@eslint-react/eslint-plugin';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
-import pluginReact from 'eslint-plugin-react-x';
 import rulesPerfectionist from './rules-perfectionist.ts';
 import rulesReact from './rules-react.ts';
 
@@ -18,13 +18,12 @@ const config: LinterConfigEntry = {
 		'react-x': pluginReact,
 	},
 	settings: {
-		react: {
+		'react-x': {
 			version: 'detect',
 		},
 	},
 	rules: {
 		...rulesPerfectionist,
-		...rulesReact,
 		...rulesReact,
 	},
 };

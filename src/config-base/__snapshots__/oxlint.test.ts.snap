@@ -13,7 +13,7 @@ exports[`is a valid Oxlint config 1`] = `
     },
     {
       "name": "react-x",
-      "specifier": "eslint-plugin-react-x",
+      "specifier": "@eslint-react/eslint-plugin",
     },
   ],
   "overrides": [
@@ -23,12 +23,21 @@ exports[`is a valid Oxlint config 1`] = `
         "**/*.test-d.{ts,cts,mts}",
       ],
       "rules": {
-        "react-x/component-hook-factories": "off",
+        "react-x/dom-no-flush-sync": "off",
+        "react-x/dom-no-unsafe-iframe-sandbox": "off",
+        "react-x/jsx-no-useless-fragment": "off",
+        "react-x/naming-convention-context-name": "off",
+        "react-x/naming-convention-id-name": "off",
+        "react-x/naming-convention-ref-name": "off",
         "react-x/no-nested-component-definitions": "off",
         "react-x/no-nested-lazy-component-declarations": "off",
-        "react-x/no-unnecessary-use-callback": "off",
-        "react-x/no-unnecessary-use-memo": "off",
+        "react-x/no-unnecessary-use-prefix": "off",
         "react-x/no-unstable-context-value": "off",
+        "react-x/static-components": "off",
+        "react-x/web-api-no-leaked-event-listener": "off",
+        "react-x/web-api-no-leaked-interval": "off",
+        "react-x/web-api-no-leaked-resize-observer": "off",
+        "react-x/web-api-no-leaked-timeout": "off",
       },
     },
     {
@@ -344,11 +353,6 @@ exports[`is a valid Oxlint config 1`] = `
         },
       },
     ],
-  },
-  "settings": {
-    "react": {
-      "version": "19.2.4",
-    },
   },
 }
 `;

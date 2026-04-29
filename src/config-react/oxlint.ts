@@ -14,9 +14,8 @@ const config: OxlintConfig = {
 	...clone(oxlintConfigBase),
 
 	settings: {
-		react: {
-			// Oxlint doesn’t support `detect`
-			version: '19.2.5',
+		'react-x': {
+			version: 'detect',
 		},
 	},
 };

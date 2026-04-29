@@ -1,5 +1,5 @@
 import type { LinterConfigEntry } from '../types/eslint.d.ts';
-import pluginReact from 'eslint-plugin-react-x';
+import pluginReact from '@eslint-react/eslint-plugin';
 import rulesReact from './rules-react.ts';
 
 /**

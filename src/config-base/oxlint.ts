@@ -15,14 +15,8 @@ const config: OxlintConfig = {
 	jsPlugins: [
 		transformPlugin('stylistic', '@stylistic/eslint-plugin'),
 		transformPlugin('perfectionist', 'eslint-plugin-perfectionist'),
-		transformPlugin('react-x', 'eslint-plugin-react-x'),
+		transformPlugin('react-x', '@eslint-react/eslint-plugin'),
 	],
-	settings: {
-		react: {
-			// Oxlint doesn’t support `detect`
-			version: '19.2.4',
-		},
-	},
 	rules: {
 		...transformRules(rulesPerfectionist, {
 			omit: [

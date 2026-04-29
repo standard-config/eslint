@@ -5,9 +5,9 @@ import transformPlugin from './index.ts';
 vi.unmock('./index.ts');
 
 const PLUGINS = [
+	'@eslint-react/eslint-plugin',
 	'@stylistic/eslint-plugin',
 	'eslint-plugin-perfectionist',
-	'eslint-plugin-react-x',
 ];
 
 test.each(PLUGINS)('resolves `%s`', (plugin) => {
