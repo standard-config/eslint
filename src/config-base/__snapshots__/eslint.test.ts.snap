@@ -120,12 +120,6 @@ exports[`is a valid ESLint config 1`] = `
         },
       },
     ],
-    "camelcase": [
-      "error",
-      {
-        "properties": "always",
-      },
-    ],
     "perfectionist/sort-array-includes": [
       "error",
       {

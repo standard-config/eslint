@@ -124,12 +124,6 @@ exports[`defines a valid ESLint config 1`] = `
           },
         },
       ],
-      "camelcase": [
-        "error",
-        {
-          "properties": "always",
-        },
-      ],
       "perfectionist/sort-array-includes": [
         "error",
         {
@@ -499,12 +493,6 @@ exports[`supports the \`react\` option 1`] = `
               "/",
             ],
           },
-        },
-      ],
-      "camelcase": [
-        "error",
-        {
-          "properties": "always",
         },
       ],
       "perfectionist/sort-array-includes": [

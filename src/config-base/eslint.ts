@@ -1,7 +1,6 @@
 import type { LinterConfigEntry } from '../types/eslint.d.ts';
 import pluginStylistic from '@stylistic/eslint-plugin';
 import pluginPerfectionist from 'eslint-plugin-perfectionist';
-import rulesCore from './rules-core.ts';
 import rulesPerfectionist from './rules-perfectionist.ts';
 import rulesStylistic from './rules-stylistic.ts';
 
@@ -22,7 +21,6 @@ const config: LinterConfigEntry = {
 		reportUnusedInlineConfigs: 'error',
 	},
 	rules: {
-		...rulesCore,
 		...rulesPerfectionist,
 		...rulesStylistic,
 	},
