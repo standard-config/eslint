@@ -3,6 +3,11 @@ autoInstallPeers: false
 catalog:
   oxlint: ^1.62.0
 
+minimumReleaseAgeExclude:
+  - '@standard-config/*'
+  - eslint
+  - oxlint
+
 overrides:
   '@types/node>undici-types': '-'
   vite-plus>oxfmt: '-'
@@ -10,6 +15,7 @@ overrides:
 
 peerDependencyRules:
   allowAny:
+    - '@vitest/coverage-v8'
     - oxlint-tsgolint
     - vitest
 
