@@ -30,8 +30,8 @@ importers:
         version: 5.9.0(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3)
     devDependencies:
       '@eslint/compat':
-        specifier: ^2.0.5
-        version: 2.0.5(eslint@10.3.0(jiti@2.6.1))
+        specifier: ^2.1.0
+        version: 2.1.0(eslint@10.3.0(jiti@2.6.1))
       '@standard-config/oxlint':
         specifier: ^1.9.0
         version: 1.9.0(oxlint@1.62.0)
@@ -172,8 +172,8 @@ packages:
       eslint: ^10.2.1
       typescript: '*'
 
-  '@eslint/compat@2.0.5':
-    resolution: {integrity: sha512-IbHDbHJfkVNv6xjlET8AIVo/K1NQt7YT4Rp6ok/clyBGcpRx1l6gv0Rq3vBvYfPJIZt6ODf66Zq08FJNDpnzgg==}
+  '@eslint/compat@2.1.0':
+    resolution: {integrity: sha512-LgaSCymEpw7tF53xvDw9SNsraPb1IBHxpdABIOM0hW8UAlP8znrjYtuxfR58FSJ3L9BhwD+FaPRFQpZq84Nh6g==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     peerDependencies:
       eslint: ^8.40 || 9 || 10
@@ -1815,7 +1815,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint/compat@2.0.5(eslint@10.3.0(jiti@2.6.1))':
+  '@eslint/compat@2.1.0(eslint@10.3.0(jiti@2.6.1))':
     dependencies:
       '@eslint/core': 1.2.1
     optionalDependencies:
