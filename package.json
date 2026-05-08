@@ -74,7 +74,7 @@
 		"jiti": "^2.6.1",
 		"oxlint": "catalog:",
 		"prettier": "^3.8.3",
-		"publint": "^0.3.18",
+		"publint": "^0.3.20",
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.59.1",
 		"vite-plus": "^0.1.20",
