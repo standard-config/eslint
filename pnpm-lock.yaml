@@ -60,8 +60,8 @@ importers:
         specifier: ^3.8.3
         version: 3.8.3
       publint:
-        specifier: ^0.3.20
-        version: 0.3.20
+        specifier: ^0.3.21
+        version: 0.3.21
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -70,7 +70,7 @@ importers:
         version: 8.59.3(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)
       vite-plus:
         specifier: ^0.1.21
-        version: 0.1.21(@types/node@22.19.19)(@vitest/coverage-v8@4.1.6)(jiti@2.7.0)(publint@0.3.20)(typescript@6.0.3)(vite@8.0.12(@types/node@22.19.19)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0)
+        version: 0.1.21(@types/node@22.19.19)(@vitest/coverage-v8@4.1.6)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(vite@8.0.12(@types/node@22.19.19)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0)
       vitest:
         specifier: ^4.1.6
         version: 4.1.6(@types/node@22.19.19)(@vitest/coverage-v8@4.1.6)(jiti@2.7.0)(yaml@2.9.0)
@@ -1489,8 +1489,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  publint@0.3.20:
-    resolution: {integrity: sha512-UWqFYP7VBVCe9l/leEEGJrDs6Am4K4KapLmLi5qbt+9fA+Ny38ghdW+bw1nYfVqCK8/3kgsxjjhFjTYqYYRpyw==}
+  publint@0.3.21:
+    resolution: {integrity: sha512-OqejcnMV6E9zel2oCrUOJEiiFkGiAAni0A6ibfQNh1k9Gu5z4F+Yso8lllam7AzmV6Do0vp7u3UpZNRBwuXaHQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -2396,7 +2396,7 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
 
-  '@voidzero-dev/vite-plus-core@0.1.21(@types/node@22.19.19)(jiti@2.7.0)(publint@0.3.20)(typescript@6.0.3)(yaml@2.9.0)':
+  '@voidzero-dev/vite-plus-core@0.1.21(@types/node@22.19.19)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(yaml@2.9.0)':
     dependencies:
       '@oxc-project/runtime': 0.129.0
       '@oxc-project/types': 0.129.0
@@ -2406,7 +2406,7 @@ snapshots:
       '@types/node': 22.19.19
       fsevents: 2.3.3
       jiti: 2.7.0
-      publint: 0.3.20
+      publint: 0.3.21
       typescript: 6.0.3
       yaml: 2.9.0
 
@@ -2428,11 +2428,11 @@ snapshots:
   '@voidzero-dev/vite-plus-linux-x64-musl@0.1.21':
     optional: true
 
-  '@voidzero-dev/vite-plus-test@0.1.21(@types/node@22.19.19)(@vitest/coverage-v8@4.1.6)(jiti@2.7.0)(publint@0.3.20)(typescript@6.0.3)(vite@8.0.12(@types/node@22.19.19)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0)':
+  '@voidzero-dev/vite-plus-test@0.1.21(@types/node@22.19.19)(@vitest/coverage-v8@4.1.6)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(vite@8.0.12(@types/node@22.19.19)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0)':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@types/chai': 5.2.3
-      '@voidzero-dev/vite-plus-core': 0.1.21(@types/node@22.19.19)(jiti@2.7.0)(publint@0.3.20)(typescript@6.0.3)(yaml@2.9.0)
+      '@voidzero-dev/vite-plus-core': 0.1.21(@types/node@22.19.19)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(yaml@2.9.0)
       es-module-lexer: 1.7.0
       obug: 2.1.1
       pixelmatch: 7.2.0
@@ -3010,7 +3010,7 @@ snapshots:
 
   prettier@3.8.3: {}
 
-  publint@0.3.20:
+  publint@0.3.21:
     dependencies:
       '@publint/pack': 0.1.4
       package-manager-detector: 1.6.0
@@ -3118,11 +3118,11 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plus@0.1.21(@types/node@22.19.19)(@vitest/coverage-v8@4.1.6)(jiti@2.7.0)(publint@0.3.20)(typescript@6.0.3)(vite@8.0.12(@types/node@22.19.19)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0):
+  vite-plus@0.1.21(@types/node@22.19.19)(@vitest/coverage-v8@4.1.6)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(vite@8.0.12(@types/node@22.19.19)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0):
     dependencies:
       '@oxc-project/types': 0.129.0
-      '@voidzero-dev/vite-plus-core': 0.1.21(@types/node@22.19.19)(jiti@2.7.0)(publint@0.3.20)(typescript@6.0.3)(yaml@2.9.0)
-      '@voidzero-dev/vite-plus-test': 0.1.21(@types/node@22.19.19)(@vitest/coverage-v8@4.1.6)(jiti@2.7.0)(publint@0.3.20)(typescript@6.0.3)(vite@8.0.12(@types/node@22.19.19)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0)
+      '@voidzero-dev/vite-plus-core': 0.1.21(@types/node@22.19.19)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(yaml@2.9.0)
+      '@voidzero-dev/vite-plus-test': 0.1.21(@types/node@22.19.19)(@vitest/coverage-v8@4.1.6)(jiti@2.7.0)(publint@0.3.21)(typescript@6.0.3)(vite@8.0.12(@types/node@22.19.19)(jiti@2.7.0)(yaml@2.9.0))(yaml@2.9.0)
       oxlint: 1.65.0(oxlint-tsgolint@0.22.1)
       oxlint-tsgolint: 0.22.1
     optionalDependencies:
