@@ -1,12 +1,7 @@
 autoInstallPeers: false
 
 catalog:
-  oxlint: ^1.65.0
-
-minimumReleaseAgeExclude:
-  - '@standard-config/*'
-  - eslint
-  - oxlint
+  oxlint: ^1.66.0
 
 overrides:
   '@types/node>undici-types': '-'
