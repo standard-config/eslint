@@ -1,4 +1,4 @@
-[![](https://img.shields.io/npm/v/%40standard-config%2Feslint?style=flat-square)](https://npmx.dev/package/@standard-config/eslint) [![](https://img.shields.io/github/actions/workflow/status/standard-config/eslint/test.yaml?style=flat-square)](https://github.com/standard-config/eslint/actions/workflows/test.yaml) [![](https://img.shields.io/codecov/c/github/standard-config/eslint?style=flat-square)](https://codecov.io/github/standard-config/eslint)
+[![](https://img.shields.io/npm/v/%40standard-config%2Feslint?style=flat-square)](https://npmx.dev/package/@standard-config/eslint) [![](https://img.shields.io/badge/status-deprecated-important?style=flat-square)](https://github.com/standard-config/eslint)
 
 # @standard-config/eslint
 
@@ -33,23 +33,6 @@ import { defineConfig } from '@standard-config/eslint';
 
 export default defineConfig({
     react: true,
-});
-```
-
-### Skipping ESLint
-
-Standard Config comes with a set of utilities that can translate this config to Oxlint, eliminating the need to run ESLint. This relies on Oxlint’s experimental [JS Plugins](https://oxc.rs/docs/guide/usage/linter/js-plugins.html) support.
-
-In your `oxlint.config.ts`:
-
-```ts
-import { defineOxlintConfig } from '@standard-config/eslint/utilities';
-
-export default defineOxlintConfig({
-    react: true,
-    rules: {
-        /* Optional overrides */
-    },
 });
 ```
 
