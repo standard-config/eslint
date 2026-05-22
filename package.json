@@ -70,7 +70,7 @@
 		"@standard-config/prettier": "^1.13.2",
 		"@standard-config/tsconfig": "^3.1.0",
 		"@types/node": "^22.19.19",
-		"@vitest/coverage-v8": "^4.1.6",
+		"@vitest/coverage-v8": "^4.1.7",
 		"eslint": "^10.4.0",
 		"jiti": "^2.7.0",
 		"oxlint": "catalog:",
