@@ -1,7 +1,7 @@
 autoInstallPeers: false
 
 catalog:
-  oxlint: ^1.66.0
+  oxlint: ^1.67.0
 
 overrides:
   '@types/node>undici-types': '-'
@@ -17,6 +17,10 @@ peerDependencyRules:
 strictPeerDependencies: true
 
 trustPolicy: no-downgrade
+
+trustPolicyExclude:
+  - ast-v8-to-istanbul@1.0.2
+  - tinyexec@1.2.2
 
 updateConfig:
   ignoreDependencies:
