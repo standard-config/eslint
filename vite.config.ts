@@ -1,8 +1,6 @@
+import { defineOxlintConfig } from '@standard-config/oxlint';
+import { configStylisticConfigFiles } from '@standard-config/oxlint-stylistic';
 import { defineConfig } from 'vite-plus';
-import {
-	defineOxlintConfig,
-	oxlintConfigConfigFiles,
-} from './src/utilities.ts';
 
 export default defineConfig({
 	test: {
@@ -25,7 +23,7 @@ export default defineConfig({
 					'src/config-*/index.ts',
 					'src/config-*/rules-*.ts',
 				],
-				...oxlintConfigConfigFiles,
+				...configStylisticConfigFiles,
 			},
 		],
 	}),
