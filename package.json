@@ -79,7 +79,7 @@
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.60.1",
 		"vite-plus": "^0.1.23",
-		"vitest": "^4.1.7"
+		"vitest": "^4.1.8"
 	},
 	"scripts": {
 		"build": "vp pack",
